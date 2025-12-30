@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\System">
+      <UniqueIdentifier>{68be25e7-1061-4e96-8d10-8410bec13e5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Scene">
+      <UniqueIdentifier>{cae3dd19-bb21-4941-969f-aaa2e401eab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Graphic">
+      <UniqueIdentifier>{3ab9f81e-977b-4474-8050-ff7cdea65a25}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>src\System</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>src\System</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameManager.h">
+      <Filter>src\System</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>src\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>src\System</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+  </ItemGroup>
+</Project>
