@@ -28,6 +28,12 @@
     <ClCompile Include="Input.cpp">
       <Filter>src\System</Filter>
     </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>src\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="TItleScene.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -44,6 +50,9 @@
     </ClInclude>
     <ClInclude Include="Input.h">
       <Filter>src\System</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.h">
+      <Filter>src\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

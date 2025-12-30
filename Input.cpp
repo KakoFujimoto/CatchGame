@@ -1,5 +1,5 @@
-#include"Input.h"
-#include<DxLib.h>
+#include "Input.h"
+#include <DxLib.h>
 
 void Input::update()
 {

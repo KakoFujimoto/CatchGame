@@ -1,14 +1,14 @@
-#include"DxLib.h"
-#include"GameManager.h"
+#include "DxLib.h"
+#include "GameManager.h"
 
 void GameManager::initialize()
 {
-
+	sceneManager.initialize();
 }
 void GameManager::update()
 {
 	// 前フレームのキー押下状態の取得及び今フレームの状態の保存
-	 input.update();
+	input.update();
 	// シーン遷移
 	sceneManager.update(input);
 

@@ -1,6 +1,7 @@
 #pragma once
+#include <string>
 
 class Renderer {
 public:
-	void draw();
+	void drawText(int x, int y, const std::string& text);
 };
