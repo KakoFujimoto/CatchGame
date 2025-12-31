@@ -1,13 +1,17 @@
 #include "FallingObjectManager.h"
 #include "FallingObjectType.h"
 #include "FallingObject.h"
+#include "GameTimer.h"
 #include "Renderer.h"
 
 #include <DxLib.h>
 
-void FallingObjectManager::update()
+void FallingObjectManager::update(bool canSpawn)
 {
-	spawn();
+	if (canSpawn)
+	{
+		spawn();
+	}
 	for (auto& obj : objects_)
 	{
 		obj.update();
@@ -47,7 +51,6 @@ void FallingObjectManager::spawn()
 	int x = GetRand(640); // ‰æ–Ê•
 	int y = 0;
 
-	// ‚Ğ‚Æ‚Ü‚¸‹›‚¾‚¯
-	// ‚Ì‚¿‚Ù‚ÇŠâ‚ğ‘«‚·
 	objects_.emplace_back(FallingObjectType::Fish, x, y);
+	objects_.emplace_back(FallingObjectType::Rock, x, y);
 }

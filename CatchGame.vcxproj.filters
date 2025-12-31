@@ -52,6 +52,9 @@
     <ClCompile Include="FallingObjectManager.cpp">
       <Filter>src\FallingObject</Filter>
     </ClCompile>
+    <ClCompile Include="GameTimer.cpp">
+      <Filter>src\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -89,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="FallingObjectManager.h">
       <Filter>src\FallingObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTimer.h">
+      <Filter>src\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

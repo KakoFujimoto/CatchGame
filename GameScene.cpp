@@ -7,12 +7,18 @@
 void GameScene::onEnter()
 {
 	player.initialize(400, 500);
+	// ç°ÇÕâºÇ≈êßå¿éûä‘5ïb
+	gameTimer.start(60 * 5);
 }
 
 SceneId GameScene::update(const Input& input)
 {
 	player.update(input);
-	fallingObjectManager.update();
+
+	gameTimer.update();
+	bool canSpawn = !gameTimer.isTimeUp();
+	fallingObjectManager.update(canSpawn);
+
 	return SceneId::None;
 }
 

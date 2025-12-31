@@ -2,6 +2,7 @@
 #include "Scene.h"
 #include "SceneId.h"
 #include "Player.h"
+#include "GameTimer.h"
 #include "FallingObjectManager.h"
 
 class Input;
@@ -15,4 +16,5 @@ public:
 private:
 	Player player;
 	FallingObjectManager fallingObjectManager;
+	GameTimer gameTimer;
 };
