@@ -1,26 +1,21 @@
 #include "TitleScene.h"
 #include "Input.h"
 #include "Renderer.h"
+#include "SceneId.h"
 #include <DxLib.h>
 
-void TitleScene::update(const Input& input)
+
+SceneId TitleScene::update(const Input& input)
 {
 	if (input.isTriggered(KEY_INPUT_RETURN))
 	{
-		entered = true;
+		return SceneId::Game;
 	}
+	return SceneId::None;
 }
+
 void TitleScene::draw(Renderer& renderer)
 {
 	renderer.drawText(200, 200, "TITLE");
-
-	if (!entered)
-	{
-		renderer.drawText(200, 240, "PRESS ENTER");
-	}
-	else
-	{
-		renderer.drawText(200, 240, "ENTER PRESSED");
-
-	}
+	renderer.drawText(200, 240, "PRESS ENTER");
 }

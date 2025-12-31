@@ -12,10 +12,12 @@ void Input::update()
 		current[i] = CheckHitKey(i);
 	}
 }
+
 bool Input::isPressed(int key) const
 {
 	return current[key] != 0;
 }
+
 bool Input::isTriggered(int key) const
 {
 	return current[key] != 0 && previous[key] == 0;

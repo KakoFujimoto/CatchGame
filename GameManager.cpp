@@ -11,12 +11,13 @@ void GameManager::update()
 	input.update();
 	// ƒV[ƒ“‘JˆÚ
 	sceneManager.update(input);
-
 }
+
 void GameManager::draw()
 {
 	sceneManager.draw(renderer);
 }
+
 void GameManager::finalize()
 {
 
