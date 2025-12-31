@@ -13,12 +13,20 @@ void GameScene::onEnter()
 
 SceneId GameScene::update(const Input& input)
 {
-	player.update(input);
-
 	gameTimer.update();
-	bool canSpawn = !gameTimer.isTimeUp();
-	fallingObjectManager.update(canSpawn);
+	bool timeUp = gameTimer.isTimeUp();
 
+	if (!timeUp)
+	{
+		player.update(input);
+	}
+
+	fallingObjectManager.update(!timeUp);
+
+	if (timeUp)
+	{
+		return SceneId::Result;
+	}
 	return SceneId::None;
 }
 
