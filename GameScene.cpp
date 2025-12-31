@@ -12,10 +12,12 @@ void GameScene::onEnter()
 SceneId GameScene::update(const Input& input)
 {
 	player.update(input);
+	fallingObjectManager.update();
 	return SceneId::None;
 }
 
 void GameScene::draw(Renderer& renderer)
 {
 	player.draw(renderer);
+	fallingObjectManager.draw(renderer);
 }

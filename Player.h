@@ -10,9 +10,9 @@ public:
 	void update(const Input& input);
 	void draw(Renderer& renderer) const;
 private:
-	int x = 0;
-	int y = 0;
-	int speed = 5;
-	int width = 40;
-	int height = 40;
+	int x_ = 0;
+	int y_ = 0;
+	int speed_ = 5;
+	int width_ = 40;
+	int height_ = 40;
 };

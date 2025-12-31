@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FallingObject.cpp" />
+    <ClCompile Include="FallingObjectManager.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Input.cpp" />
@@ -149,6 +151,9 @@
     <ClCompile Include="TItleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FallingObject.h" />
+    <ClInclude Include="FallingObjectManager.h" />
+    <ClInclude Include="FallingObjectType.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Input.h" />

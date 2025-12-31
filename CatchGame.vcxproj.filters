@@ -17,6 +17,9 @@
     <Filter Include="src\UI">
       <UniqueIdentifier>{bd2ba834-3ed7-44c6-bdd0-606493e1dbdb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\FallingObject">
+      <UniqueIdentifier>{a52231cd-c44b-43ea-bb95-268f39d9bb2d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -42,6 +45,12 @@
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>src\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="FallingObject.cpp">
+      <Filter>src\FallingObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FallingObjectManager.cpp">
+      <Filter>src\FallingObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +80,15 @@
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>src\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="FallingObjectType.h">
+      <Filter>src\FallingObject</Filter>
+    </ClInclude>
+    <ClInclude Include="FallingObject.h">
+      <Filter>src\FallingObject</Filter>
+    </ClInclude>
+    <ClInclude Include="FallingObjectManager.h">
+      <Filter>src\FallingObject</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

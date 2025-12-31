@@ -2,7 +2,7 @@
 #include "Scene.h"
 #include "SceneId.h"
 #include "Player.h"
-
+#include "FallingObjectManager.h"
 
 class Input;
 
@@ -14,4 +14,5 @@ public:
 	virtual void draw(Renderer& renderer) override;
 private:
 	Player player;
+	FallingObjectManager fallingObjectManager;
 };
