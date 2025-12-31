@@ -14,6 +14,9 @@
     <Filter Include="src\Graphic">
       <UniqueIdentifier>{3ab9f81e-977b-4474-8050-ff7cdea65a25}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\UI">
+      <UniqueIdentifier>{bd2ba834-3ed7-44c6-bdd0-606493e1dbdb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +39,9 @@
     </ClCompile>
     <ClCompile Include="GameScene.cpp">
       <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>src\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +68,9 @@
     </ClInclude>
     <ClInclude Include="GameScene.h">
       <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>src\UI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
