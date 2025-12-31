@@ -19,8 +19,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 	while (ProcessMessage() == 0)
 	{
+
 		ClearDrawScreen();
 		gameManager.update();
+
 		gameManager.draw();
 		ScreenFlip();
 	}

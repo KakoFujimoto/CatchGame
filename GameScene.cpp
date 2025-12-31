@@ -26,4 +26,5 @@ void GameScene::draw(Renderer& renderer)
 {
 	player.draw(renderer);
 	fallingObjectManager.draw(renderer);
+	gameTimer.draw(renderer);
 }
