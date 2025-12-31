@@ -2,6 +2,8 @@
 #include "Scene.h"
 #include "TitleScene.h"
 #include "GameScene.h"
+#include "ResultScene.h"
+
 
 
 class Renderer;
@@ -22,5 +24,5 @@ private:
 	// 各Sceneのインスタンス
 	TitleScene titleScene;
 	GameScene gameScene;
-	// ResultScene resultScene;
+	ResultScene resultScene;
 };

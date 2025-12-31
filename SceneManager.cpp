@@ -41,9 +41,9 @@ void SceneManager::changeScene(SceneId id)
 	case SceneId::Game:
 		currentScene = &gameScene;
 		break;
-	//case SceneId::Result:
-	//	currentScene = &resultScene;
-	//	break;
+	case SceneId::Result:
+		currentScene = &resultScene;
+		break;
 	default:
 		break;
 	}

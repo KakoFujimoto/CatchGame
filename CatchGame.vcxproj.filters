@@ -55,6 +55,9 @@
     <ClCompile Include="GameTimer.cpp">
       <Filter>src\System</Filter>
     </ClCompile>
+    <ClCompile Include="ResultScene.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -95,6 +98,9 @@
     </ClInclude>
     <ClInclude Include="GameTimer.h">
       <Filter>src\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ResultScene.h">
+      <Filter>src\Scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
