@@ -65,3 +65,13 @@ ScoreEffect FallingObject::getScoreEffect() const
 	}
 	return ScoreEffect::None;
 }
+
+void FallingObject::markForRemove()
+{
+	remove_ = true;
+}
+
+bool FallingObject::isMarkedForRemove() const
+{
+	return remove_;
+}

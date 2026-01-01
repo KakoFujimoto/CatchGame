@@ -55,7 +55,31 @@ void FallingObjectManager::spawn()
 	objects_.emplace_back(FallingObjectType::Rock, x, y);
 }
 
+// 読み取り専用
 const std::vector<FallingObject>& FallingObjectManager::getObject() const
 {
 	return objects_;
+}
+
+// 更新・削除用
+std::vector<FallingObject>& FallingObjectManager::getObjectForUpdate()
+{
+	return objects_;
+}
+
+void FallingObjectManager::removeMarkedObjects()
+{
+	auto& objs = objects_;
+
+	objs.erase(
+		std::remove_if(
+			objs.begin(),
+			objs.end(),
+			[](const FallingObject& obj)
+			{
+				return obj.isMarkedForRemove();
+			}
+		),
+		objs.end()
+	);
 }

@@ -4,6 +4,7 @@
 #include "SceneId.h"
 #include "HitCheck.h"
 #include <DxLib.h>
+#include <iostream>
 
 void GameScene::onEnter()
 {
@@ -25,10 +26,11 @@ SceneId GameScene::update(const Input& input)
 	fallingObjectManager.update(!timeUp);
 
 	// ìñÇΩÇËîªíË
-	for (const auto& obj : fallingObjectManager.getObject())
+	for (auto& obj : fallingObjectManager.getObjectForUpdate())
 	{
 		if (HitCheck::isHit(player.getHitArea(), obj.getHitArea()))
 		{
+			//printfDx("HIT effect=%d\n", (int)obj.getScoreEffect());
 			switch (obj.getScoreEffect())
 			{
 			case ScoreEffect::Plus:
@@ -38,14 +40,14 @@ SceneId GameScene::update(const Input& input)
 				score.add(-5);
 				break;
 			}
-			// Ç‘Ç¬Ç©Ç¡ÇΩObjectÇÕè¡Ç∑(markForRemoveÇÕñ¢é¿ëï)
-			// fallingObjectManager.markForRemove(obj);
+			obj.markForRemove();
 		}
 	}
 	if (timeUp)
 	{
 		return SceneId::Result;
 	}
+	fallingObjectManager.removeMarkedObjects();
 	return SceneId::None;
 }
 
