@@ -1,5 +1,6 @@
 #include "FallingObject.h"
 #include "Renderer.h"
+#include "HitArea.h"
 
 FallingObject::FallingObject(FallingObjectType type, int x, int y)
 	: type_(type), x_(x), y_(y)
@@ -39,4 +40,9 @@ void FallingObject::draw(Renderer renderer) const
 bool FallingObject::isOutOfScreen() const
 {
 	return y_ > 500; // ‰æ–Ê‰º‚Éo‚½‚©‚Ç‚¤‚©
+}
+
+HitArea FallingObject::getHitArea() const
+{
+	return HitArea(x_, y_, width_, height_);
 }

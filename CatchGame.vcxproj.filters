@@ -58,6 +58,12 @@
     <ClCompile Include="ResultScene.cpp">
       <Filter>src\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="HitArea.cpp">
+      <Filter>src\System</Filter>
+    </ClCompile>
+    <ClCompile Include="HitCheck.cpp">
+      <Filter>src\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -101,6 +107,12 @@
     </ClInclude>
     <ClInclude Include="ResultScene.h">
       <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="HitArea.h">
+      <Filter>src\System</Filter>
+    </ClInclude>
+    <ClInclude Include="HitCheck.h">
+      <Filter>src\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
