@@ -10,8 +10,7 @@ class FallingObject
 public:
 	FallingObject(
 		FallingObjectType type,
-		int x, int y, int width, int height
-	);
+		int x, int y);
 	void update();
 	void draw(Renderer renderer) const;
 	bool isOutOfScreen() const;

@@ -4,16 +4,20 @@
 
 FallingObject::FallingObject(
 	FallingObjectType type,
-	int x, int y,int width, int height
+	int x, int y
 )
-	: type_(type), x_(x), y_(y), width_(width), height_(height)
+	: type_(type), x_(x), y_(y)
 {
 	switch (type_)
 	{
 	case FallingObjectType::Fish:
+		width_ = 40;
+		height_ = 40;
 		fallspeed_ = 2;
 		break;
 	case FallingObjectType::Rock:
+		width_ = 40;
+		height_ = 40;
 		fallspeed_ = 5;
 		break;
 	}
