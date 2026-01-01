@@ -8,8 +8,8 @@
 void GameScene::onEnter()
 {
 	player.initialize(400, 500);
-	// ¡‚Í‰¼‚Å§ŒÀŠÔ5•b
-	gameTimer.start(60 * 5);
+	// ¡‚Í‰¼‚Å§ŒÀŠÔ30•b
+	gameTimer.start(60 * 30);
 }
 
 SceneId GameScene::update(const Input& input)
@@ -32,10 +32,10 @@ SceneId GameScene::update(const Input& input)
 			switch (obj.getScoreEffect())
 			{
 			case ScoreEffect::Plus:
-				score_ += 10;
+				score.add(10);
 				break;
 			case ScoreEffect::Minus:
-				score_ -= 5;
+				score.add(-5);
 				break;
 			}
 			// ‚Ô‚Â‚©‚Á‚½Object‚ÍÁ‚·(markForRemove‚Í–¢À‘•)
@@ -54,9 +54,10 @@ void GameScene::draw(Renderer& renderer)
 	player.draw(renderer);
 	fallingObjectManager.draw(renderer);
 	gameTimer.draw(renderer);
+	score.draw(renderer);
 }
 
 int GameScene::getScore() const
 {
-	return score_;
+	return score.get();
 }

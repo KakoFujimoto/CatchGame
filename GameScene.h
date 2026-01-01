@@ -4,6 +4,7 @@
 #include "Player.h"
 #include "GameTimer.h"
 #include "FallingObjectManager.h"
+#include "Score.h"
 
 class Input;
 
@@ -18,5 +19,5 @@ private:
 	Player player;
 	FallingObjectManager fallingObjectManager;
 	GameTimer gameTimer;
-	int score_ = 0;
+	Score score;
 };

@@ -64,6 +64,9 @@
     <ClCompile Include="HitCheck.cpp">
       <Filter>src\System</Filter>
     </ClCompile>
+    <ClCompile Include="Score.cpp">
+      <Filter>src\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -115,6 +118,9 @@
       <Filter>src\System</Filter>
     </ClInclude>
     <ClInclude Include="ScoreEffect.h">
+      <Filter>src\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.h">
       <Filter>src\System</Filter>
     </ClInclude>
   </ItemGroup>

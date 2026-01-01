@@ -152,6 +152,7 @@
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="ResultScene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Score.cpp" />
     <ClCompile Include="TItleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -170,6 +171,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneId.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Score.h" />
     <ClInclude Include="ScoreEffect.h" />
     <ClInclude Include="TitleScene.h" />
   </ItemGroup>

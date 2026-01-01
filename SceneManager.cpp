@@ -42,7 +42,7 @@ void SceneManager::changeScene(SceneId id)
 		currentScene = &gameScene;
 		break;
 	case SceneId::Result:
-		// スコアをResuktSceneに渡す
+		// スコアをResultSceneに渡す
 		resultScene.setScore(gameScene.getScore());
 		currentScene = &resultScene;
 		break;
