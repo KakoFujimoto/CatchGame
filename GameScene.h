@@ -17,4 +17,5 @@ private:
 	Player player;
 	FallingObjectManager fallingObjectManager;
 	GameTimer gameTimer;
+	int score_ = 0;
 };

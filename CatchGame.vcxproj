@@ -170,6 +170,7 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneId.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="ScoreEffect.h" />
     <ClInclude Include="TitleScene.h" />
   </ItemGroup>
   <ItemGroup>

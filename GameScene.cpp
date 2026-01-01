@@ -2,6 +2,7 @@
 #include "Input.h"
 #include "Renderer.h"
 #include "SceneId.h"
+#include "HitCheck.h"
 #include <DxLib.h>
 
 void GameScene::onEnter()
@@ -23,6 +24,24 @@ SceneId GameScene::update(const Input& input)
 
 	fallingObjectManager.update(!timeUp);
 
+	// ìñÇΩÇËîªíË
+	for (const auto& obj : fallingObjectManager.getObject())
+	{
+		if (HitCheck::isHit(player.getHitArea(), obj.getHitArea()))
+		{
+			switch (obj.getScoreEffect())
+			{
+			case ScoreEffect::Plus:
+				score_ += 10;
+				break;
+			case ScoreEffect::Minus:
+				score_ -= 5;
+				break;
+			}
+			// Ç‘Ç¬Ç©Ç¡ÇΩObjectÇÕè¡Ç∑(markForRemoveÇÕñ¢é¿ëï)
+			// fallingObjectManager.markForRemove(obj);
+		}
+	}
 	if (timeUp)
 	{
 		return SceneId::Result;

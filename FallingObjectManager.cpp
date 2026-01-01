@@ -54,3 +54,8 @@ void FallingObjectManager::spawn()
 	objects_.emplace_back(FallingObjectType::Fish, x, y);
 	objects_.emplace_back(FallingObjectType::Rock, x, y);
 }
+
+const std::vector<FallingObject>& FallingObjectManager::getObject() const
+{
+	return objects_;
+}

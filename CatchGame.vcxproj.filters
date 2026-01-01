@@ -114,6 +114,9 @@
     <ClInclude Include="HitCheck.h">
       <Filter>src\System</Filter>
     </ClInclude>
+    <ClInclude Include="ScoreEffect.h">
+      <Filter>src\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

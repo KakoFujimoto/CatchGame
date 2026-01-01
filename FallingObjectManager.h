@@ -11,6 +11,7 @@ public:
 	void update(bool canSpawn);
 	void draw(Renderer renderer) const;
 	void spawn();
+	const std::vector<FallingObject>& getObject() const;
 private:
 	std::vector<FallingObject> objects_;
 	int spawnTimer_ = 0;

@@ -2,8 +2,11 @@
 #include "Renderer.h"
 #include "HitArea.h"
 
-FallingObject::FallingObject(FallingObjectType type, int x, int y)
-	: type_(type), x_(x), y_(y)
+FallingObject::FallingObject(
+	FallingObjectType type,
+	int x, int y,int width, int height
+)
+	: type_(type), x_(x), y_(y), width_(width), height_(height)
 {
 	switch (type_)
 	{
@@ -45,4 +48,16 @@ bool FallingObject::isOutOfScreen() const
 HitArea FallingObject::getHitArea() const
 {
 	return HitArea(x_, y_, width_, height_);
+}
+
+ScoreEffect FallingObject::getScoreEffect() const
+{
+	switch (type_)
+	{
+	case FallingObjectType::Fish:
+		return ScoreEffect::Plus;
+	case FallingObjectType::Rock:
+		return ScoreEffect::Minus;
+	}
+	return ScoreEffect::None;
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "FallingObjectType.h"
+#include "ScoreEffect.h"
 
 class Renderer;
 class HitArea;
@@ -7,11 +8,15 @@ class HitArea;
 class FallingObject
 {
 public:
-	FallingObject(FallingObjectType type, int x, int y);
+	FallingObject(
+		FallingObjectType type,
+		int x, int y, int width, int height
+	);
 	void update();
 	void draw(Renderer renderer) const;
 	bool isOutOfScreen() const;
 	HitArea getHitArea() const;
+	ScoreEffect getScoreEffect() const;
 private:
 	FallingObjectType type_;
 	int x_;
