@@ -13,6 +13,7 @@ public:
 	void onEnter() override;
 	SceneId update(const Input& input) override;
 	virtual void draw(Renderer& renderer) override;
+	int getScore() const;
 private:
 	Player player;
 	FallingObjectManager fallingObjectManager;

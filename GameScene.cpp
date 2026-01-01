@@ -55,3 +55,8 @@ void GameScene::draw(Renderer& renderer)
 	fallingObjectManager.draw(renderer);
 	gameTimer.draw(renderer);
 }
+
+int GameScene::getScore() const
+{
+	return score_;
+}

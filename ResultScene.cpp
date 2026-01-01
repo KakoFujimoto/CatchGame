@@ -16,6 +16,12 @@ SceneId ResultScene::update(const Input& input)
 
 void ResultScene::draw(Renderer& renderer)
 {
-	renderer.drawText(200, 200, "RESULT");
+	auto score = std::to_string(score_);
+	renderer.drawText(200, 200, "RESULT" + score);
 	renderer.drawText(200, 240, "ENTER TO REPLAY");
+}
+
+void ResultScene::setScore(int score)
+{
+	score_ = score;
 }

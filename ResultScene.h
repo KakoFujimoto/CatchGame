@@ -7,4 +7,7 @@ class ResultScene : public Scene
 public:
 	SceneId update(const Input& input) override;
 	void draw(Renderer& renderer) override;
+	void setScore(int score);
+private:
+	int score_ = 0;
 };

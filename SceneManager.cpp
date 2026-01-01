@@ -42,6 +42,8 @@ void SceneManager::changeScene(SceneId id)
 		currentScene = &gameScene;
 		break;
 	case SceneId::Result:
+		// ƒXƒRƒA‚ğResuktScene‚É“n‚·
+		resultScene.setScore(gameScene.getScore());
 		currentScene = &resultScene;
 		break;
 	default:
