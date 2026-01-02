@@ -7,11 +7,12 @@
 #include "System/Score.h"
 
 class Input;
+class ImageLoader;
 
 class GameScene : public Scene
 {
 public:
-	void onEnter() override;
+	void onEnter(const ImageLoader& imageLoader);
 	SceneId update(const Input& input) override;
 	virtual void draw(Renderer& renderer) override;
 	int getScore() const;
@@ -20,4 +21,5 @@ private:
 	FallingObjectManager fallingObjectManager;
 	GameTimer gameTimer;
 	Score score;
+	const ImageLoader* imageLoader_ = nullptr;
 };

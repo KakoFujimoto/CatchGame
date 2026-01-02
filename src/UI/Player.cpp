@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "Renderer.h"
 #include "System/HitArea.h"
+#include "ImageLoader.h"
 #include <DxLib.h>
 
 void Player::initialize(int startX, int startY)
@@ -29,9 +30,11 @@ void Player::update(const Input& input)
 	}
 }
 
-void Player::draw(Renderer& renderer) const
+void Player::draw(Renderer& renderer, const ImageLoader& imageLoader) const
 {
-	renderer.drawText(x_, y_, "P");
+	//renderer.drawText(x_, y_, "P");
+	int img = imageLoader.getPlayerImage(facing_, moveState_);
+	renderer.drawImage(x_, y_, img);
 }
 
 HitArea Player::getHitArea() const

@@ -5,13 +5,14 @@
 
 class Renderer;
 class HitArea;
+class ImageLoader;
 
 class Player
 {
 public:
 	void initialize(int startX, int startY);
 	void update(const Input& input);
-	void draw(Renderer& renderer) const;
+	void draw(Renderer& renderer, const ImageLoader& imageLoader) const;
 	HitArea getHitArea() const;
 private:
 	int x_ = 0;

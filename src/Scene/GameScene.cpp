@@ -5,9 +5,11 @@
 #include "System/HitCheck.h"
 #include <DxLib.h>
 #include <iostream>
+#include <cassert>
 
-void GameScene::onEnter()
+void GameScene::onEnter(const ImageLoader& imageLoader)
 {
+	imageLoader_ = &imageLoader;
 	player.initialize(400, 500);
 	// ¡‚Í‰¼‚Å§ŒÀŠÔ30•b
 	gameTimer.start(60 * 30);
@@ -53,7 +55,8 @@ SceneId GameScene::update(const Input& input)
 
 void GameScene::draw(Renderer& renderer)
 {
-	player.draw(renderer);
+	assert(imageLoader_ != nullptr);
+	player.draw(renderer, *imageLoader_);
 	fallingObjectManager.draw(renderer);
 	gameTimer.draw(renderer);
 	score.draw(renderer);

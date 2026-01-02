@@ -3,7 +3,8 @@
 
 void GameManager::initialize()
 {
-	sceneManager.initialize();
+	imageLoader.load();
+	sceneManager.initialize(*this);
 }
 void GameManager::update()
 {
@@ -21,4 +22,9 @@ void GameManager::draw()
 void GameManager::finalize()
 {
 
+}
+
+ImageLoader GameManager::getImageLoader()
+{
+	return imageLoader;
 }

@@ -1,10 +1,12 @@
 #include "SceneManager.h"
 #include "TitleScene.h"
 #include "SceneId.h"
+#include "System/GameManager.h"
 
 
-void SceneManager::initialize()
+void SceneManager::initialize(GameManager& gameManager)
 {
+	gameManager_ = &gameManager;
 	currentScene = &titleScene;
 	currentScene->onEnter();
 }
@@ -40,6 +42,9 @@ void SceneManager::changeScene(SceneId id)
 		break;
 	case SceneId::Game:
 		currentScene = &gameScene;
+		// 現状こちらは使っていない
+		//currentScene->onEnter();
+		gameScene.onEnter(gameManager_->getImageLoader());
 		break;
 	case SceneId::Result:
 		// スコアをResultSceneに渡す

@@ -4,16 +4,16 @@
 #include "GameScene.h"
 #include "ResultScene.h"
 
-
-
 class Renderer;
 class Input;
+class GameManager;
+
 // 各Sceneのインスタンスを保持する
 // Sceneの切り替えをする
 class SceneManager
 {
 public:
-	void initialize();
+	void initialize(GameManager& gameManager);
 	void update(const Input& input);
 	void draw(Renderer& renderer);
 	void changeScene(SceneId id);
@@ -25,4 +25,6 @@ private:
 	TitleScene titleScene;
 	GameScene gameScene;
 	ResultScene resultScene;
+
+	GameManager* gameManager_ = nullptr;
 };

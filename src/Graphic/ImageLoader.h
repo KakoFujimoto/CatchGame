@@ -1,7 +1,6 @@
 #pragma once
-
-class Facing;
-class MoveState;
+#include "Facing.h"
+#include "MoveState.h"
 
 
 class ImageLoader

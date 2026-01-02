@@ -4,4 +4,5 @@
 class Renderer {
 public:
 	void drawText(int x, int y, const std::string& text);
+	void drawImage(int x, int y, int imageHandle);
 };
