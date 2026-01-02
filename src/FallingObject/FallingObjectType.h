@@ -4,4 +4,5 @@ enum class FallingObjectType
 {
 	Fish,
 	Rock,
+	Count
 };

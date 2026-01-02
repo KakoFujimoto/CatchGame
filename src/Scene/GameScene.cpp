@@ -55,7 +55,7 @@ SceneId GameScene::update(const Input& input)
 void GameScene::draw(Renderer& renderer)
 {
 	player.draw(renderer, *imageLoader_);
-	fallingObjectManager.draw(renderer);
+	fallingObjectManager.draw(renderer, *imageLoader_);
 	gameTimer.draw(renderer);
 	score.draw(renderer);
 }

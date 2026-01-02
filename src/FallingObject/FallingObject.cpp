@@ -1,6 +1,8 @@
 #include "FallingObject.h"
 #include "Renderer.h"
 #include "System/HitArea.h"
+#include "ImageLoader.h"
+
 
 FallingObject::FallingObject(
 	FallingObjectType type,
@@ -28,20 +30,10 @@ void FallingObject::update()
 	y_ += fallspeed_;
 }
 
-void FallingObject::draw(Renderer& renderer) const
+void FallingObject::draw(Renderer& renderer, const ImageLoader& imageLoader) const
 {
-	const char* text = "?";
-
-	switch (type_)
-	{
-	case FallingObjectType::Fish:
-		text = "‹›";
-		break;
-	case FallingObjectType::Rock:
-		text = "Šâ";
-		break;
-	}
-	renderer.drawText(x_, y_, text);
+	int img = imageLoader.getFallingObjectImage(type_);
+	renderer.drawImage(x_, y_, img);
 }
 
 bool FallingObject::isOutOfScreen() const

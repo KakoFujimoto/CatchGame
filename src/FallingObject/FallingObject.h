@@ -4,6 +4,8 @@
 
 class Renderer;
 class HitArea;
+class ImageLoader;
+
 
 class FallingObject
 {
@@ -12,7 +14,7 @@ public:
 		FallingObjectType type,
 		int x, int y);
 	void update();
-	void draw(Renderer& renderer) const;
+	void draw(Renderer& renderer, const ImageLoader& imageLoader) const;
 	bool isOutOfScreen() const;
 	HitArea getHitArea() const;
 	ScoreEffect getScoreEffect() const;

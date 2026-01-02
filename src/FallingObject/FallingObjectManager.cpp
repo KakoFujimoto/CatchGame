@@ -1,6 +1,7 @@
 #include "FallingObjectManager.h"
 #include "FallingObjectType.h"
 #include "FallingObject.h"
+#include "ImageLoader.h"
 #include "System/GameTimer.h"
 #include "Renderer.h"
 
@@ -28,11 +29,11 @@ void FallingObjectManager::update(bool canSpawn)
 		objects_.end());
 }
 
-void FallingObjectManager::draw(Renderer renderer) const
+void FallingObjectManager::draw(Renderer renderer, const ImageLoader& imageLoader) const
 {
 	for (const auto& obj : objects_)
 	{
-		obj.draw(renderer);
+		obj.draw(renderer, imageLoader);
 	}
 }
 
