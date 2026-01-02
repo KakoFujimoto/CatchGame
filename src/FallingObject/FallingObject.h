@@ -12,7 +12,7 @@ public:
 		FallingObjectType type,
 		int x, int y);
 	void update();
-	void draw(Renderer renderer) const;
+	void draw(Renderer& renderer) const;
 	bool isOutOfScreen() const;
 	HitArea getHitArea() const;
 	ScoreEffect getScoreEffect() const;

@@ -28,7 +28,7 @@ void FallingObject::update()
 	y_ += fallspeed_;
 }
 
-void FallingObject::draw(Renderer renderer) const
+void FallingObject::draw(Renderer& renderer) const
 {
 	const char* text = "?";
 
