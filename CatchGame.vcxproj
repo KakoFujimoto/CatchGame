@@ -146,6 +146,7 @@
     <ClCompile Include="GameTimer.cpp" />
     <ClCompile Include="HitArea.cpp" />
     <ClCompile Include="HitCheck.cpp" />
+    <ClCompile Include="ImageLoader.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="GameTimer.h" />
     <ClInclude Include="HitArea.h" />
     <ClInclude Include="HitCheck.h" />
+    <ClInclude Include="ImageLoader.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="MoveState.h" />
     <ClInclude Include="Player.h" />
