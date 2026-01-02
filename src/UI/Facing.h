@@ -3,5 +3,6 @@
 enum class Facing
 {
 	Left,
-	Right
+	Right,
+	Count
 };

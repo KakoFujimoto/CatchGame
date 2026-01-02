@@ -3,5 +3,6 @@
 enum class MoveState
 {
 	Idle,
-	Walk
+	Walk,
+	Count
 };
