@@ -1,5 +1,5 @@
 #pragma once
-#include "Input.h"
+#include "System/Input.h"
 #include "Facing.h"
 #include "MoveState.h"
 

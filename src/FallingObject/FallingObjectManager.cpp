@@ -1,7 +1,7 @@
 #include "FallingObjectManager.h"
 #include "FallingObjectType.h"
 #include "FallingObject.h"
-#include "GameTimer.h"
+#include "System/GameTimer.h"
 #include "Renderer.h"
 
 #include <DxLib.h>

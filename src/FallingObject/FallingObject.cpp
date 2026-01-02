@@ -1,6 +1,6 @@
 #include "FallingObject.h"
 #include "Renderer.h"
-#include "HitArea.h"
+#include "System/HitArea.h"
 
 FallingObject::FallingObject(
 	FallingObjectType type,

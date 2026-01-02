@@ -1,6 +1,6 @@
 #include "Player.h"
 #include "Renderer.h"
-#include "HitArea.h"
+#include "System/HitArea.h"
 #include <DxLib.h>
 
 void Player::initialize(int startX, int startY)

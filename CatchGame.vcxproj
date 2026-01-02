@@ -76,7 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\k.fujimoto\project\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\k.fujimoto\project\CatchGame\src\UI;C:\Users\k.fujimoto\project\CatchGame\System;C:\Users\k.fujimoto\project\CatchGame\src\Scene;C:\Users\k.fujimoto\project\CatchGame\src\Graphic;C:\Users\k.fujimoto\project\CatchGame\src\FallingObject;C:\Users\k.fujimoto\project\CatchGame\src;C:\Users\k.fujimoto\project\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\k.fujimoto\project\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\k.fujimoto\project\CatchGame\src\UI;C:\Users\k.fujimoto\project\CatchGame\System;C:\Users\k.fujimoto\project\CatchGame\src\Scene;C:\Users\k.fujimoto\project\CatchGame\src\Graphic;C:\Users\k.fujimoto\project\CatchGame\src\FallingObject;C:\Users\k.fujimoto\project\CatchGame\src;C:\Users\k.fujimoto\project\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -139,45 +139,45 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FallingObject.cpp" />
-    <ClCompile Include="FallingObjectManager.cpp" />
-    <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="GameScene.cpp" />
-    <ClCompile Include="GameTimer.cpp" />
-    <ClCompile Include="HitArea.cpp" />
-    <ClCompile Include="HitCheck.cpp" />
-    <ClCompile Include="ImageLoader.cpp" />
-    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="src\FallingObject\FallingObject.cpp" />
+    <ClCompile Include="src\FallingObject\FallingObjectManager.cpp" />
+    <ClCompile Include="src\System\GameManager.cpp" />
+    <ClCompile Include="src\Scene\GameScene.cpp" />
+    <ClCompile Include="src\System\GameTimer.cpp" />
+    <ClCompile Include="src\System\HitArea.cpp" />
+    <ClCompile Include="src\System\HitCheck.cpp" />
+    <ClCompile Include="src\Graphic\ImageLoader.cpp" />
+    <ClCompile Include="src\System\Input.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="ResultScene.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="Score.cpp" />
-    <ClCompile Include="TItleScene.cpp" />
+    <ClCompile Include="src\UI\Player.cpp" />
+    <ClCompile Include="src\Graphic\Renderer.cpp" />
+    <ClCompile Include="src\Scene\ResultScene.cpp" />
+    <ClCompile Include="src\Scene\SceneManager.cpp" />
+    <ClCompile Include="src\System\Score.cpp" />
+    <ClCompile Include="src\Scene\TItleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FallingObject.h" />
-    <ClInclude Include="FallingObjectManager.h" />
-    <ClInclude Include="FallingObjectType.h" />
-    <ClInclude Include="GameManager.h" />
-    <ClInclude Include="GameScene.h" />
-    <ClInclude Include="GameTimer.h" />
-    <ClInclude Include="HitArea.h" />
-    <ClInclude Include="HitCheck.h" />
-    <ClInclude Include="ImageLoader.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="MoveState.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Facing.h" />
-    <ClInclude Include="Renderer.h" />
-    <ClInclude Include="ResultScene.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="SceneId.h" />
-    <ClInclude Include="SceneManager.h" />
-    <ClInclude Include="Score.h" />
-    <ClInclude Include="ScoreEffect.h" />
-    <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="src\FallingObject\FallingObject.h" />
+    <ClInclude Include="src\FallingObject\FallingObjectManager.h" />
+    <ClInclude Include="src\FallingObject\FallingObjectType.h" />
+    <ClInclude Include="src\System\GameManager.h" />
+    <ClInclude Include="src\Scene\GameScene.h" />
+    <ClInclude Include="src\System\GameTimer.h" />
+    <ClInclude Include="src\System\HitArea.h" />
+    <ClInclude Include="src\System\HitCheck.h" />
+    <ClInclude Include="src\Graphic\ImageLoader.h" />
+    <ClInclude Include="src\System\Input.h" />
+    <ClInclude Include="src\UI\MoveState.h" />
+    <ClInclude Include="src\UI\Player.h" />
+    <ClInclude Include="src\UI\Facing.h" />
+    <ClInclude Include="src\Graphic\Renderer.h" />
+    <ClInclude Include="src\Scene\ResultScene.h" />
+    <ClInclude Include="src\Scene\Scene.h" />
+    <ClInclude Include="src\Scene\SceneId.h" />
+    <ClInclude Include="src\Scene\SceneManager.h" />
+    <ClInclude Include="src\System\Score.h" />
+    <ClInclude Include="src\System\ScoreEffect.h" />
+    <ClInclude Include="src\Scene\TitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

@@ -1,6 +1,6 @@
 #pragma once
 #include "FallingObjectType.h"
-#include "ScoreEffect.h"
+#include "System/ScoreEffect.h"
 
 class Renderer;
 class HitArea;

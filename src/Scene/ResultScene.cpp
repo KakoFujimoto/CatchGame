@@ -1,5 +1,5 @@
 #include "ResultScene.h"
-#include "Input.h"
+#include "System/Input.h"
 #include "Renderer.h"
 #include "SceneId.h"
 #include <DxLib.h>

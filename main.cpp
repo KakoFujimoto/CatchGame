@@ -1,5 +1,5 @@
 #include"DxLib.h"
-#include"GameManager.h"
+#include"System/GameManager.h"
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {

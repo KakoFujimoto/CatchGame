@@ -1,10 +1,10 @@
 #pragma once
 #include "Scene.h"
 #include "SceneId.h"
-#include "Player.h"
-#include "GameTimer.h"
-#include "FallingObjectManager.h"
-#include "Score.h"
+#include "UI/Player.h"
+#include "System/GameTimer.h"
+#include "FallingObject/FallingObjectManager.h"
+#include "System/Score.h"
 
 class Input;
 
