@@ -13,11 +13,19 @@ void Player::update(const Input& input)
 {
 	if (input.isPressed(KEY_INPUT_LEFT))
 	{
+		facing_ = Facing::Left;
+		moveState_ = MoveState::Walk;
 		x_ -= speed_;
 	}
 	if (input.isPressed(KEY_INPUT_RIGHT))
 	{
+		facing_ = Facing::Right;
+		moveState_ = MoveState::Walk;
 		x_ += speed_;
+	}
+	else
+	{
+		moveState_ = MoveState::Idle;
 	}
 }
 

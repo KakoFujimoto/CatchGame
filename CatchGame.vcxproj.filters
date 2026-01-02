@@ -123,6 +123,12 @@
     <ClInclude Include="Score.h">
       <Filter>src\System</Filter>
     </ClInclude>
+    <ClInclude Include="Facing.h">
+      <Filter>src\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveState.h">
+      <Filter>src\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

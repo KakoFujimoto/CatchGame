@@ -1,5 +1,7 @@
 #pragma once
 #include "Input.h"
+#include "Facing.h"
+#include "MoveState.h"
 
 class Renderer;
 class HitArea;
@@ -17,4 +19,7 @@ private:
 	int speed_ = 5;
 	int width_ = 40;
 	int height_ = 40;
+
+	Facing facing_ = Facing::Left;
+	MoveState moveState_ = MoveState::Idle;
 };

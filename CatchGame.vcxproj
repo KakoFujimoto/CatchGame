@@ -165,7 +165,9 @@
     <ClInclude Include="HitArea.h" />
     <ClInclude Include="HitCheck.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="MoveState.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Facing.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="ResultScene.h" />
     <ClInclude Include="Scene.h" />
