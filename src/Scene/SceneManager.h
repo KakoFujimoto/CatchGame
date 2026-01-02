@@ -3,6 +3,8 @@
 #include "TitleScene.h"
 #include "GameScene.h"
 #include "ResultScene.h"
+#include "SceneId.h"
+
 
 class Renderer;
 class Input;
@@ -13,18 +15,19 @@ class GameManager;
 class SceneManager
 {
 public:
-	void initialize(GameManager& gameManager);
-	void update(const Input& input);
-	void draw(Renderer& renderer);
-	void changeScene(SceneId id);
+    void initialize(GameManager& gameManager);
+    void update(const Input& input);
+    void draw(Renderer& renderer);
+    void changeScene(SceneId id);
 
 private:
-	Scene* currentScene = nullptr; // 今アクティブなScene実体
+    Scene* currentScene = nullptr; // 今アクティブなScene実体
+    SceneId currentSceneId = SceneId::None;
 
-	// 各Sceneのインスタンス
-	TitleScene titleScene;
-	GameScene gameScene;
-	ResultScene resultScene;
+    // 各Sceneのインスタンス
+    TitleScene titleScene;
+    GameScene gameScene;
+    ResultScene resultScene;
 
-	GameManager* gameManager_ = nullptr;
+    GameManager* gameManager_ = nullptr;
 };

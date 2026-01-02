@@ -12,7 +12,7 @@ public:
 	void update();
 	void draw();
 	void finalize();
-	ImageLoader getImageLoader();
+	ImageLoader& getImageLoader();
 private:
 	SceneManager sceneManager;
 	Renderer renderer;

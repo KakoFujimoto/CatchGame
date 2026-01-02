@@ -24,7 +24,7 @@ void GameManager::finalize()
 
 }
 
-ImageLoader GameManager::getImageLoader()
+ImageLoader& GameManager::getImageLoader()
 {
 	return imageLoader;
 }

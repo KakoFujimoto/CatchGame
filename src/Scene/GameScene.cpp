@@ -32,7 +32,6 @@ SceneId GameScene::update(const Input& input)
 	{
 		if (HitCheck::isHit(player.getHitArea(), obj.getHitArea()))
 		{
-			//printfDx("HIT effect=%d\n", (int)obj.getScoreEffect());
 			switch (obj.getScoreEffect())
 			{
 			case ScoreEffect::Plus:
@@ -55,7 +54,6 @@ SceneId GameScene::update(const Input& input)
 
 void GameScene::draw(Renderer& renderer)
 {
-	assert(imageLoader_ != nullptr);
 	player.draw(renderer, *imageLoader_);
 	fallingObjectManager.draw(renderer);
 	gameTimer.draw(renderer);
