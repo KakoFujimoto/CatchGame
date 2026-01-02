@@ -9,6 +9,7 @@
 
 void GameScene::onEnter(const ImageLoader& imageLoader)
 {
+	score.reset();
 	imageLoader_ = &imageLoader;
 	player.initialize(400, 500);
 	// ¡‚Í‰¼‚Å§ŒÀŠÔ30•b
