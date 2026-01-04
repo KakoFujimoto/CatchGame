@@ -8,10 +8,10 @@
 class GameManager
 {
 public:
+	GameManager();
 	void initialize();
 	void update();
 	void draw();
-	void finalize();
 	ImageLoader& getImageLoader();
 private:
 	SceneManager sceneManager;

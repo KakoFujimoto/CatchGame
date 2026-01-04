@@ -25,7 +25,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 		ScreenFlip();
 	}
 
-	gameManager.finalize();
 	DxLib_End();
 	return 0;
 }

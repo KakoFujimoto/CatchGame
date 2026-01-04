@@ -1,6 +1,13 @@
 #include "DxLib.h"
 #include "GameManager.h"
 
+GameManager::GameManager()
+	: sceneManager()
+	, renderer()
+	, input()
+	, imageLoader()
+{ }
+
 void GameManager::initialize()
 {
 	imageLoader.load();
@@ -17,11 +24,6 @@ void GameManager::update()
 void GameManager::draw()
 {
 	sceneManager.draw(renderer);
-}
-
-void GameManager::finalize()
-{
-
 }
 
 ImageLoader& GameManager::getImageLoader()
