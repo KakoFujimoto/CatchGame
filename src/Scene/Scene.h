@@ -8,7 +8,7 @@ class Scene
 {
 public:
 	virtual ~Scene(){}
-	virtual void onEnter(){}
+	virtual void onEnter(SceneManager& manager, Scene& previous){}
 	virtual SceneId update(const Input& input) = 0;
 	virtual void draw(Renderer& renderer) = 0;
 };

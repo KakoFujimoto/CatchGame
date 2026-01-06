@@ -76,7 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\k.fujimoto\project\CatchGame\src\UI;C:\Users\k.fujimoto\project\CatchGame\System;C:\Users\k.fujimoto\project\CatchGame\src\Scene;C:\Users\k.fujimoto\project\CatchGame\src\Graphic;C:\Users\k.fujimoto\project\CatchGame\src\FallingObject;C:\Users\k.fujimoto\project\CatchGame\src;C:\Users\k.fujimoto\project\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\prj\DxLib_VC\プロジェクトに追加すべきファイル_VC用;D:\prj\CatchGame\src\UI;D:\prj\CatchGame\src\System;D:\prj\CatchGame\src\Scene;D:\prj\CatchGame\src\Graphic;D:\prj\CatchGame\src\FallingObject;D:\prj\CatchGame\src</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\k.fujimoto\project\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\prj\DxLib_VC\プロジェクトに追加すべきファイル_VC用;D:\prj\CatchGame\src\UI;D:\prj\CatchGame\src\System;D:\prj\CatchGame\src\Scene;D:\prj\CatchGame\src\Graphic;D:\prj\CatchGame\src\FallingObject;D:\prj\CatchGame\src</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\k.fujimoto\project\CatchGame\src\UI;C:\Users\k.fujimoto\project\CatchGame\System;C:\Users\k.fujimoto\project\CatchGame\src\Scene;C:\Users\k.fujimoto\project\CatchGame\src\Graphic;C:\Users\k.fujimoto\project\CatchGame\src\FallingObject;C:\Users\k.fujimoto\project\CatchGame\src;C:\Users\k.fujimoto\project\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\prj\DxLib_VC\プロジェクトに追加すべきファイル_VC用;D:\prj\CatchGame\src\UI;D:\prj\CatchGame\src\System;D:\prj\CatchGame\src\Scene;D:\prj\CatchGame\src\Graphic;D:\prj\CatchGame\src\FallingObject;D:\prj\CatchGame\src</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -127,7 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\k.fujimoto\project\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\prj\DxLib_VC\プロジェクトに追加すべきファイル_VC用;D:\prj\CatchGame\src\UI;D:\prj\CatchGame\src\System;D:\prj\CatchGame\src\Scene;D:\prj\CatchGame\src\Graphic;D:\prj\CatchGame\src\FallingObject;D:\prj\CatchGame\src</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -178,6 +178,7 @@
     <ClInclude Include="src\System\Score.h" />
     <ClInclude Include="src\System\ScoreEffect.h" />
     <ClInclude Include="src\Scene\TitleScene.h" />
+    <ClInclude Include="src\UI\UI.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

@@ -37,23 +37,27 @@ void SceneManager::draw(Renderer& renderer)
 
 void SceneManager::changeScene(SceneId id)
 {
+    Scene& prevScene = *currentScene;
+
     switch (id)
     {
     case SceneId::Title:
         currentScene = &titleScene;
-        currentScene->onEnter();
+        //currentScene->onEnter();
         break;
     case SceneId::Game:
         currentScene = &gameScene;
-        gameScene.onEnter(gameManager_->getImageLoader());
+        //gameScene.onEnter(gameManager_->getImageLoader());
         break;
     case SceneId::Result:
         // ƒXƒRƒA‚ðResultScene‚É“n‚·
-        resultScene.setScore(gameScene.getScore());
+        //resultScene.setScore(gameScene.getScore());
         currentScene = &resultScene;
-        currentScene->onEnter();
+        //currentScene->onEnter();
         break;
     default:
         return;
     }
+
+    currentScene->onEnter(*this, prevScene);
 }

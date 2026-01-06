@@ -16,6 +16,7 @@ void Player::initialize(int startX, int startY)
 void Player::update(const Input& input)
 {
 	if (input.isPressed(KEY_INPUT_LEFT))
+	// if (input.isPressed(Input::KeyCode::Left))
 	{
 		facing_ = Facing::Left;
 		moveState_ = MoveState::Walk;
@@ -33,9 +34,11 @@ void Player::update(const Input& input)
 	}
 }
 
-void Player::draw(Renderer& renderer, const ImageLoader& imageLoader) const
+void Player::draw(Renderer& renderer, /*const*/ ImageLoader& imageLoader) const
 {
-	int img = imageLoader.getPlayerImage(facing_, moveState_);
+	PlayerImageGetter imgGetter;
+	int img = imgGetter.getImage(imageLoader, facing_, moveState_);
+	//int img = imageLoader.get(facing_, moveState_);
 	renderer.drawImage(x_, y_, img);
 }
 

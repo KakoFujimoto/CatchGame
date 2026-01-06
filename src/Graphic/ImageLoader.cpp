@@ -2,7 +2,7 @@
 #include <Dxlib.h>
 
 void ImageLoader::load()
-{
+{/*
 	playerImages_[(int)Facing::Left][(int)MoveState::Idle]
 		= LoadGraph("assets/images/player/player_left_1.png");
 
@@ -19,16 +19,34 @@ void ImageLoader::load()
 		= LoadGraph("assets/images/falling_objects/fish.png");
 
 	fallingObjectImages_[(int)FallingObjectType::Rock]
-		= LoadGraph("assets/images/falling_objects/rock.png");
+		= LoadGraph("assets/images/falling_objects/rock.png");*/
 
 }
 
-int ImageLoader::getPlayerImage(Facing facing, MoveState moveState) const
+int loadImage(std::string name)
 {
-	return playerImages_[(int)facing][(int)moveState];
+	return LoadGraph(("assets/images" + name + ".png").c_str());
 }
 
-int ImageLoader::getFallingObjectImage(FallingObjectType type) const
+int ImageLoader::get(std::string name)
 {
-	return fallingObjectImages_[(int)type];
+	auto exists = images_.find(name);
+	if (exists != images_.end()) {
+		return images_[name];
+	}
+
+	int id = loadImage(name);
+	images_[name] = id;
+	return id;
 }
+
+//
+//int ImageLoader::getPlayerImage(Facing facing, MoveState moveState) const
+//{
+//	return playerImages_[(int)facing][(int)moveState];
+//}
+//
+//int ImageLoader::getFallingObjectImage(FallingObjectType type) const
+//{
+//	return fallingObjectImages_[(int)type];
+//}

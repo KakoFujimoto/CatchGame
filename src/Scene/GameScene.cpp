@@ -28,28 +28,36 @@ SceneId GameScene::update(const Input& input)
 
 	fallingObjectManager.update(!timeUp);
 
+	std::vector<FallingObject> deletes;
+
 	// “–‚½‚è”»’è
 	for (auto& obj : fallingObjectManager.getObjectForUpdate())
 	{
 		if (HitCheck::isHit(player.getHitArea(), obj.getHitArea()))
 		{
-			switch (obj.getScoreEffect())
-			{
-			case ScoreEffect::Plus:
-				score.add(10);
-				break;
-			case ScoreEffect::Minus:
-				score.add(-5);
-				break;
-			}
-			obj.markForRemove();
+			obj.effect(this);
+
+			//switch (obj.getScoreEffect())
+			//{
+			//case ScoreEffect::Plus:
+			//	score.add(10);
+			//	break;
+			//case ScoreEffect::Minus:
+			//	score.add(-5);
+			//	break;
+			//}
+			deletes.push_back(obj);
+			//obj.markForRemove();
 		}
 	}
+	//fallingObjectManager.removeMarkedObjects();
+
+	std::for_each(deletes.begin(), deletes.end(), [&x] { fallingObjectManager.remove(x) });
+
 	if (timeUp)
 	{
 		return SceneId::Result;
 	}
-	fallingObjectManager.removeMarkedObjects();
 	return SceneId::None;
 }
 
@@ -57,8 +65,9 @@ void GameScene::draw(Renderer& renderer)
 {
 	player.draw(renderer, *imageLoader_);
 	fallingObjectManager.draw(renderer, *imageLoader_);
-	gameTimer.draw(renderer);
-	score.draw(renderer);
+	//gameTimer.draw(renderer);
+	//score.draw(renderer);
+	ui.draw(renderer, *this);
 }
 
 int GameScene::getScore() const
