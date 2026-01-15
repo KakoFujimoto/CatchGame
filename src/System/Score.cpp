@@ -17,7 +17,7 @@ void Score::reset()
 	score_ = 0;
 }
 
-void Score::draw(Renderer& renderer) const
+void Score::draw(Renderer& renderer, int x, int y) const
 {
-	renderer.drawText(10, 25, "Score : " + std::to_string(score_));
+	renderer.drawText(x, y, "Score : " + std::to_string(score_));
 }

@@ -1,4 +1,7 @@
 #pragma once
+#include <map>
+#include <string>
+
 #include "Facing.h"
 #include "MoveState.h"
 #include "FallingObjectType.h"
