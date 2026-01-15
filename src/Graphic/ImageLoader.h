@@ -3,16 +3,16 @@
 #include "MoveState.h"
 #include "FallingObjectType.h"
 
+class ImageStore;
+class PlayerImages;
+class FallingObjectImages;
 
 class ImageLoader
 {
 public:
-	void load();
-	int getPlayerImage(Facing facing, MoveState moveState) const;
-	int getFallingObjectImage(FallingObjectType type) const;
-
-private:
-	int playerImages_[(int)Facing::Count][(int)MoveState::Count];
-	int fallingObjectImages_[(int)FallingObjectType::Count];
-
+	void loadAll(
+		ImageStore& imageStore,
+		PlayerImages& playerImages,
+		FallingObjectImages& fallingImages
+		);
 };
