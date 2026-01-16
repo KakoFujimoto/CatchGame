@@ -142,6 +142,7 @@
     <ClCompile Include="src\FallingObject\FallingObject.cpp" />
     <ClCompile Include="src\FallingObject\FallingObjectManager.cpp" />
     <ClCompile Include="src\Graphic\ImageStore.cpp" />
+    <ClCompile Include="src\Graphic\PlayerImages.cpp" />
     <ClCompile Include="src\System\GameManager.cpp" />
     <ClCompile Include="src\Scene\GameScene.cpp" />
     <ClCompile Include="src\System\GameTimer.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="src\FallingObject\FallingObjectType.h" />
     <ClInclude Include="src\Graphic\ImageId.h" />
     <ClInclude Include="src\Graphic\ImageStore.h" />
+    <ClInclude Include="src\Graphic\PlayerImages.h" />
     <ClInclude Include="src\System\GameManager.h" />
     <ClInclude Include="src\Scene\GameScene.h" />
     <ClInclude Include="src\System\GameTimer.h" />

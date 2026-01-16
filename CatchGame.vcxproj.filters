@@ -73,6 +73,9 @@
     <ClCompile Include="src\Graphic\ImageStore.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Graphic\PlayerImages.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\FallingObject\FallingObject.h" />
@@ -98,6 +101,7 @@
     <ClInclude Include="src\Scene\TitleScene.h" />
     <ClInclude Include="src\Graphic\ImageStore.h" />
     <ClInclude Include="src\Graphic\ImageId.h" />
+    <ClInclude Include="src\Graphic\PlayerImages.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
