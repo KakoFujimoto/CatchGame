@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\FallingObject\FallingObject.cpp" />
+    <ClCompile Include="src\FallingObject\FallingObjectImages.cpp" />
     <ClCompile Include="src\FallingObject\FallingObjectManager.cpp" />
     <ClCompile Include="src\Graphic\ImageStore.cpp" />
     <ClCompile Include="src\Graphic\PlayerImages.cpp" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\FallingObject\FallingObject.h" />
+    <ClInclude Include="src\FallingObject\FallingObjectImages.h" />
     <ClInclude Include="src\FallingObject\FallingObjectManager.h" />
     <ClInclude Include="src\FallingObject\FallingObjectType.h" />
     <ClInclude Include="src\Graphic\ImageId.h" />
