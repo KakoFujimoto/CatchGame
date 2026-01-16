@@ -1,5 +1,5 @@
 #include "Score.h"
-#include "Renderer.h"
+#include "Graphic/Renderer.h"
 
 
 void Score::add(int value)

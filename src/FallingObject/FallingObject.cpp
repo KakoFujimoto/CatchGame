@@ -1,7 +1,7 @@
 #include "FallingObject.h"
-#include "Renderer.h"
+#include "Graphic/Renderer.h"
 #include "System/HitArea.h"
-#include "ImageLoader.h"
+#include "Graphic/ImageLoader.h"
 
 
 FallingObject::FallingObject(

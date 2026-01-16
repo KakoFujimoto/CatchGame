@@ -1,6 +1,6 @@
 #include "GameScene.h"
 #include "System/Input.h"
-#include "Renderer.h"
+#include "Graphic/Renderer.h"
 #include "SceneId.h"
 #include "System/HitCheck.h"
 #include <DxLib.h>

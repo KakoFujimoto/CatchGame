@@ -1,5 +1,5 @@
 #include "GameTimer.h"
-#include "Renderer.h"
+#include "Graphic/Renderer.h"
 
 
 void GameTimer::start(int limitFrame)

@@ -1,7 +1,7 @@
 #pragma once
-#include "SceneManager.h"
-#include "Renderer.h"
-#include "ImageLoader.h"
+#include "Scene/SceneManager.h"
+#include "Graphic/Renderer.h"
+#include "Graphic/ImageLoader.h"
 #include "Input.h"
 
 

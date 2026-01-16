@@ -1,9 +1,9 @@
 #include "FallingObjectManager.h"
 #include "FallingObjectType.h"
 #include "FallingObject.h"
-#include "ImageLoader.h"
+#include "Graphic/ImageLoader.h"
 #include "System/GameTimer.h"
-#include "Renderer.h"
+#include "Graphic/Renderer.h"
 
 #include <DxLib.h>
 

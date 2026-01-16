@@ -1,7 +1,7 @@
 #include "Player.h"
-#include "Renderer.h"
+#include "Graphic/Renderer.h"
 #include "System/HitArea.h"
-#include "ImageLoader.h"
+#include "Graphic/ImageLoader.h"
 #include <DxLib.h>
 #include <cassert>
 

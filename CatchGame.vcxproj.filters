@@ -25,112 +25,82 @@
     <ClCompile Include="main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="GameManager.cpp">
-      <Filter>src\System</Filter>
+    <ClCompile Include="src\FallingObject\FallingObject.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>src\Scene</Filter>
+    <ClCompile Include="src\FallingObject\FallingObjectManager.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>src\System</Filter>
+    <ClCompile Include="src\System\GameManager.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>src\Graphic</Filter>
+    <ClCompile Include="src\Scene\GameScene.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="TItleScene.cpp">
-      <Filter>src\Scene</Filter>
+    <ClCompile Include="src\System\GameTimer.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="GameScene.cpp">
-      <Filter>src\Scene</Filter>
+    <ClCompile Include="src\System\HitArea.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>src\UI</Filter>
+    <ClCompile Include="src\System\HitCheck.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="FallingObject.cpp">
-      <Filter>src\FallingObject</Filter>
+    <ClCompile Include="src\Graphic\ImageLoader.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="FallingObjectManager.cpp">
-      <Filter>src\FallingObject</Filter>
+    <ClCompile Include="src\System\Input.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="GameTimer.cpp">
-      <Filter>src\System</Filter>
+    <ClCompile Include="src\UI\Player.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="ResultScene.cpp">
-      <Filter>src\Scene</Filter>
+    <ClCompile Include="src\Graphic\Renderer.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="HitArea.cpp">
-      <Filter>src\System</Filter>
+    <ClCompile Include="src\Scene\ResultScene.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="HitCheck.cpp">
-      <Filter>src\System</Filter>
+    <ClCompile Include="src\Scene\SceneManager.cpp">
+      <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Score.cpp">
-      <Filter>src\System</Filter>
+    <ClCompile Include="src\System\Score.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\TItleScene.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameManager.h">
-      <Filter>src\System</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>src\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>src\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Renderer.h">
-      <Filter>src\Graphic</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>src\System</Filter>
-    </ClInclude>
-    <ClInclude Include="TitleScene.h">
-      <Filter>src\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneId.h">
-      <Filter>src\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="GameScene.h">
-      <Filter>src\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>src\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="FallingObjectType.h">
-      <Filter>src\FallingObject</Filter>
-    </ClInclude>
-    <ClInclude Include="FallingObject.h">
-      <Filter>src\FallingObject</Filter>
-    </ClInclude>
-    <ClInclude Include="FallingObjectManager.h">
-      <Filter>src\FallingObject</Filter>
-    </ClInclude>
-    <ClInclude Include="GameTimer.h">
-      <Filter>src\System</Filter>
-    </ClInclude>
-    <ClInclude Include="ResultScene.h">
-      <Filter>src\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="HitArea.h">
-      <Filter>src\System</Filter>
-    </ClInclude>
-    <ClInclude Include="HitCheck.h">
-      <Filter>src\System</Filter>
-    </ClInclude>
-    <ClInclude Include="ScoreEffect.h">
-      <Filter>src\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Score.h">
-      <Filter>src\System</Filter>
-    </ClInclude>
-    <ClInclude Include="Facing.h">
-      <Filter>src\UI</Filter>
-    </ClInclude>
-    <ClInclude Include="MoveState.h">
-      <Filter>src\UI</Filter>
-    </ClInclude>
+    <ClInclude Include="src\FallingObject\FallingObject.h" />
+    <ClInclude Include="src\FallingObject\FallingObjectManager.h" />
+    <ClInclude Include="src\FallingObject\FallingObjectType.h" />
+    <ClInclude Include="src\System\GameManager.h" />
+    <ClInclude Include="src\Scene\GameScene.h" />
+    <ClInclude Include="src\System\GameTimer.h" />
+    <ClInclude Include="src\System\HitArea.h" />
+    <ClInclude Include="src\System\HitCheck.h" />
+    <ClInclude Include="src\Graphic\ImageLoader.h" />
+    <ClInclude Include="src\System\Input.h" />
+    <ClInclude Include="src\UI\MoveState.h" />
+    <ClInclude Include="src\UI\Player.h" />
+    <ClInclude Include="src\UI\Facing.h" />
+    <ClInclude Include="src\Graphic\Renderer.h" />
+    <ClInclude Include="src\Scene\ResultScene.h" />
+    <ClInclude Include="src\Scene\Scene.h" />
+    <ClInclude Include="src\Scene\SceneId.h" />
+    <ClInclude Include="src\Scene\SceneManager.h" />
+    <ClInclude Include="src\System\Score.h" />
+    <ClInclude Include="src\System\ScoreEffect.h" />
+    <ClInclude Include="src\Scene\TitleScene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\images\player\player_left_1.png" />
+    <Image Include="assets\images\player\player_left_2.png" />
+    <Image Include="assets\images\player\player_right_1.png" />
+    <Image Include="assets\images\player\player_right_2.png" />
   </ItemGroup>
 </Project>

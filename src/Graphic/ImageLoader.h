@@ -1,7 +1,7 @@
 #pragma once
-#include "Facing.h"
-#include "MoveState.h"
-#include "FallingObjectType.h"
+#include "UI/Facing.h"
+#include "UI/MoveState.h"
+#include "FallingObject/FallingObjectType.h"
 
 
 class ImageLoader
