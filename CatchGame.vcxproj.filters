@@ -70,6 +70,9 @@
     <ClCompile Include="src\Scene\TItleScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Graphic\ImageStore.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\FallingObject\FallingObject.h" />
@@ -93,6 +96,8 @@
     <ClInclude Include="src\System\Score.h" />
     <ClInclude Include="src\System\ScoreEffect.h" />
     <ClInclude Include="src\Scene\TitleScene.h" />
+    <ClInclude Include="src\Graphic\ImageStore.h" />
+    <ClInclude Include="src\Graphic\ImageId.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
