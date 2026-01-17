@@ -2,8 +2,13 @@
 #include "System/Input.h"
 #include "Graphic/Renderer.h"
 #include "SceneId.h"
+#include "GameScene.h"
 #include <DxLib.h>
 
+ResultScene::ResultScene(GameScene& gameScene)
+	: gameScene_(gameScene)
+{
+};
 
 SceneId ResultScene::update(const Input& input)
 {
@@ -24,4 +29,9 @@ void ResultScene::draw(Renderer& renderer)
 void ResultScene::setScore(int score)
 {
 	score_ = score;
+}
+
+void ResultScene::onEnter()
+{
+	setScore(gameScene_.getScore());
 }
