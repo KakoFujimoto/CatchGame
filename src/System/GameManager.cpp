@@ -1,23 +1,27 @@
-#include "DxLib.h"
+ï»¿#include "DxLib.h"
 #include "GameManager.h"
 
 GameManager::GameManager()
-	: sceneManager()
+	: imageStore()
+	, playerImages()
+	, fallingObjectImages()
 	, renderer()
 	, input()
 	, imageLoader()
-{ }
+	, sceneManager(imageLoader,imageStore, fallingObjectImages, playerImages)
+{
+}
 
 void GameManager::initialize()
 {
-	imageLoader.load();
+	imageLoader.loadAll(imageStore, playerImages, fallingObjectImages);
 	sceneManager.initialize(*this);
 }
 void GameManager::update()
 {
-	// ‘OƒtƒŒ[ƒ€‚ÌƒL[‰Ÿ‰ºó‘Ô‚Ìæ“¾‹y‚Ñ¡ƒtƒŒ[ƒ€‚Ìó‘Ô‚Ì•Û‘¶
+	// å‰ãƒ•ãƒ¬ãƒ¼ãƒ ã®ã‚­ãƒ¼æŠ¼ä¸‹çŠ¶æ…‹ã®å–å¾—åŠã³ä»Šãƒ•ãƒ¬ãƒ¼ãƒ ã®çŠ¶æ…‹ã®ä¿å­˜
 	input.update();
-	// ƒV[ƒ“‘JˆÚ
+	// ã‚·ãƒ¼ãƒ³é·ç§»
 	sceneManager.update(input);
 }
 

@@ -2,6 +2,8 @@
 #include "Graphic/Renderer.h"
 #include "System/HitArea.h"
 #include "Graphic/ImageLoader.h"
+#include "Graphic/ImageStore.h"
+#include "FallingObjectImages.h"
 
 
 FallingObject::FallingObject(
@@ -30,10 +32,13 @@ void FallingObject::update()
 	y_ += fallspeed_;
 }
 
-void FallingObject::draw(Renderer& renderer, const ImageLoader& imageLoader) const
+void FallingObject::draw(
+	Renderer& renderer,
+	const ImageStore& imageStore,
+	const FallingObjectImages& images) const
 {
-	int img = imageLoader.getFallingObjectImage(type_);
-	renderer.drawImage(x_, y_, img);
+	auto imageId = images.resolve(type_);
+	renderer.drawImage(x_, y_,imageStore.get(imageId));
 }
 
 bool FallingObject::isOutOfScreen() const

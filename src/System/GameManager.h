@@ -3,7 +3,9 @@
 #include "Graphic/Renderer.h"
 #include "Graphic/ImageLoader.h"
 #include "Input.h"
-
+#include "Graphic/ImageStore.h"
+#include "Graphic/PlayerImages.h"
+#include "FallingObject/FallingObjectImages.h"
 
 class GameManager
 {
@@ -13,9 +15,13 @@ public:
 	void update();
 	void draw();
 	ImageLoader& getImageLoader();
+
 private:
-	SceneManager sceneManager;
-	Renderer renderer;
-	Input input;
-	ImageLoader imageLoader;
+    ImageStore imageStore;
+    PlayerImages playerImages;
+    FallingObjectImages fallingObjectImages;
+    Renderer renderer;
+    Input input;
+    ImageLoader imageLoader;
+    SceneManager sceneManager;
 };

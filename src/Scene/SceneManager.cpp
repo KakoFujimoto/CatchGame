@@ -3,6 +3,18 @@
 #include "SceneId.h"
 #include "System/GameManager.h"
 
+SceneManager::SceneManager(
+    const ImageLoader& imageLoader,
+    const ImageStore& imageStore,
+    const FallingObjectImages& fallingObjectImages,
+    const PlayerImages& playerImages
+)
+    :titleScene(),
+    gameScene(&imageLoader,imageStore, fallingObjectImages, playerImages),
+    resultScene()
+{
+
+}
 
 void SceneManager::initialize(GameManager& gameManager)
 {

@@ -3,10 +3,23 @@
 #include "Graphic/Renderer.h"
 #include "SceneId.h"
 #include "System/HitCheck.h"
+#include "FallingObject/FallingObjectImages.h"
 #include <DxLib.h>
 #include <iostream>
 #include <cassert>
 
+GameScene::GameScene(
+	const ImageLoader* imageLoader,
+	const ImageStore& imageStore,
+	const FallingObjectImages& fallingObjectimages,
+	const PlayerImages& playerImages
+)
+	: imageLoader_(imageLoader),
+	imageStore_(imageStore),
+	fallingObjectimages_(fallingObjectimages),
+	playerImages_(playerImages)
+{
+}
 void GameScene::onEnter(const ImageLoader& imageLoader)
 {
 	score.reset();
@@ -55,8 +68,8 @@ SceneId GameScene::update(const Input& input)
 
 void GameScene::draw(Renderer& renderer)
 {
-	player.draw(renderer, *imageLoader_);
-	fallingObjectManager.draw(renderer, *imageLoader_);
+	player.draw(renderer, imageStore_, playerImages_);
+	fallingObjectManager.draw(renderer, imageStore_, fallingObjectimages_);
 	gameTimer.draw(renderer);
 	score.draw(renderer);
 }
