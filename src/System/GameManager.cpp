@@ -8,7 +8,7 @@ GameManager::GameManager()
 	, renderer()
 	, input()
 	, imageLoader()
-	, sceneManager(imageLoader,imageStore, fallingObjectImages, playerImages)
+	, sceneManager(imageStore, fallingObjectImages, playerImages)
 {
 }
 

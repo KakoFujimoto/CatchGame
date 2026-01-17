@@ -11,7 +11,6 @@ class Input;
 class GameManager;
 class ImageStore;
 class FallingObjectImages;
-class ImageLoader;
 class PlayerImages;
 
 // 各Sceneのインスタンスを保持する
@@ -20,7 +19,6 @@ class SceneManager
 {
 public:
     SceneManager(
-        const ImageLoader& imageLoader,
         const ImageStore& imageStore,
         const FallingObjectImages& fallingObjectImages,
         const PlayerImages& playerImages

@@ -4,7 +4,6 @@
 #include "System/GameManager.h"
 
 SceneManager::SceneManager(
-    const ImageLoader& imageLoader,
     const ImageStore& imageStore,
     const FallingObjectImages& fallingObjectImages,
     const PlayerImages& playerImages
