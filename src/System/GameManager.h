@@ -14,7 +14,6 @@ public:
 	void initialize();
 	void update();
 	void draw();
-	ImageLoader& getImageLoader();
 
 private:
     ImageStore imageStore;

@@ -9,21 +9,18 @@
 #include <cassert>
 
 GameScene::GameScene(
-	const ImageLoader* imageLoader,
 	const ImageStore& imageStore,
 	const FallingObjectImages& fallingObjectimages,
 	const PlayerImages& playerImages
 )
-	: imageLoader_(imageLoader),
-	imageStore_(imageStore),
+	: imageStore_(imageStore),
 	fallingObjectimages_(fallingObjectimages),
 	playerImages_(playerImages)
 {
 }
-void GameScene::onEnter(const ImageLoader& imageLoader)
+void GameScene::onEnter()
 {
 	score.reset();
-	imageLoader_ = &imageLoader;
 	player.initialize(400, 500);
 	// ç°ÇÕâºÇ≈êßå¿éûä‘30ïb
 	gameTimer.start(60 * 30);

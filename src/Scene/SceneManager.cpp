@@ -10,7 +10,7 @@ SceneManager::SceneManager(
     const PlayerImages& playerImages
 )
     :titleScene(),
-    gameScene(&imageLoader,imageStore, fallingObjectImages, playerImages),
+    gameScene(imageStore, fallingObjectImages, playerImages),
     resultScene()
 {
 
@@ -57,7 +57,7 @@ void SceneManager::changeScene(SceneId id)
         break;
     case SceneId::Game:
         currentScene = &gameScene;
-        gameScene.onEnter(gameManager_->getImageLoader());
+        gameScene.onEnter();
         break;
     case SceneId::Result:
         // ƒXƒRƒA‚ğResultScene‚É“n‚·

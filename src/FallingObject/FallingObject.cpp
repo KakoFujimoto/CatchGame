@@ -1,7 +1,6 @@
 #include "FallingObject.h"
 #include "Graphic/Renderer.h"
 #include "System/HitArea.h"
-#include "Graphic/ImageLoader.h"
 #include "Graphic/ImageStore.h"
 #include "FallingObjectImages.h"
 

@@ -29,8 +29,3 @@ void GameManager::draw()
 {
 	sceneManager.draw(renderer);
 }
-
-ImageLoader& GameManager::getImageLoader()
-{
-	return imageLoader;
-}
