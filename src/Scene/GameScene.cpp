@@ -44,15 +44,7 @@ SceneId GameScene::update(const Input& input)
 		bool hit = HitCheck::isHit(player.getHitArea(), obj.getHitArea());
 		if (hit)
 		{
-			switch (obj.getScoreEffect())
-			{
-			case ScoreEffect::Plus:
-				score.add(10);
-				break;
-			case ScoreEffect::Minus:
-				score.add(-5);
-				break;
-			}
+			score.add(obj.getScoreValue());
 			fallingObjectManager.requestRemove(&obj);
 		}
 	}

@@ -61,3 +61,17 @@ ScoreEffect FallingObject::getScoreEffect() const
 	}
 	return ScoreEffect::None;
 }
+
+int FallingObject::getScoreValue() const
+{
+	ScoreEffect effect = getScoreEffect();
+	switch (effect)
+	{
+	case ScoreEffect::Plus:
+		return 10;
+	case ScoreEffect::Minus:
+		return -5;
+	default:
+		return 0;
+	}
+}

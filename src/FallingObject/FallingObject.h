@@ -22,6 +22,7 @@ public:
 	bool isOutOfScreen() const;
 	HitArea getHitArea() const;
 	ScoreEffect getScoreEffect() const;
+	int getScoreValue() const;
 
 private:
 	FallingObjectType type_;
