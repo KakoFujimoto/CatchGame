@@ -13,12 +13,21 @@ void Input::update()
 	}
 }
 
-bool Input::isPressed(int key) const
+bool Input::isPressed(GameKey key) const
 {
-	return current[key] != 0;
+	switch (key)
+	{
+	case GameKey::Left:
+		return CheckHitKey(KEY_INPUT_LEFT);
+	case GameKey::Right:
+		return CheckHitKey(KEY_INPUT_RIGHT);
+	case GameKey::Enter:
+		return CheckHitKey(KEY_INPUT_RETURN);
+	}
+	return false;
 }
 
-bool Input::isTriggered(int key) const
+bool Input::isTriggered(GameKey key) const
 {
 	return current[key] != 0 && previous[key] == 0;
 }

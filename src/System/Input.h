@@ -1,13 +1,14 @@
 #pragma once
+#include "UI/Gamekey.h"
 
 class Input
 {
 public:
 	void update();
 	// ‰Ÿ‚µ‚Á‚Ï‚È‚µ
-	bool isPressed(int key) const;
+	bool isPressed(GameKey key) const;
 	// ‰Ÿ‚µ‚½uŠÔ
-	bool isTriggered(int key) const;
+	bool isTriggered(GameKey key) const;
 
 private:
 	static constexpr int KeyCount = 256;

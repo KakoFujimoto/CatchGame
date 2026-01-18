@@ -176,6 +176,7 @@
     <ClInclude Include="src\Graphic\ImageLoader.h" />
     <ClInclude Include="src\System\Input.h" />
     <ClInclude Include="src\GameConfig.h" />
+    <ClInclude Include="src\UI\GameKey.h" />
     <ClInclude Include="src\UI\GameUI.h" />
     <ClInclude Include="src\UI\MoveState.h" />
     <ClInclude Include="src\UI\Player.h" />
