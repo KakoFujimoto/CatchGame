@@ -2,6 +2,7 @@
 #include "System/Input.h"
 #include "Facing.h"
 #include "MoveState.h"
+#include "GameConfig.h"
 
 class Renderer;
 class HitArea;
@@ -22,10 +23,10 @@ public:
 private:
 	int x_ = 0;
 	int y_ = 0;
-	int speed_ = 5;
-	int width_ = 40;
-	int height_ = 40;
-
+	int speed_ = GameConfig::PlayerConfig::Speed;
+	int width_ = GameConfig::PlayerConfig::Width;
+	int height_ = GameConfig::PlayerConfig::Height;
+	
 	Facing facing_ = Facing::Left;
 	MoveState moveState_ = MoveState::Idle;
 };

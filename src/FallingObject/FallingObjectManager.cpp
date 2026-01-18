@@ -5,6 +5,7 @@
 #include "System/GameTimer.h"
 #include "Graphic/Renderer.h"
 #include "FallingObject/FallingObjectImages.h"
+#include "GameConfig.h"
 
 #include <DxLib.h>
 
@@ -45,15 +46,15 @@ void FallingObjectManager::spawn()
 {
 	spawnTimer_++;
 
-	// 60ƒtƒŒ[ƒ€‚É1‰ñ—N‚­
-	if (spawnTimer_ < 60)
+	auto interval = GameConfig::FallingObjectManagerConfig::SpawnIntervalFrame;
+	if (spawnTimer_ < interval)
 	{
 		return;
 	}
 
 	spawnTimer_ = 0;
 
-	int x = GetRand(640); // ‰æ–Ê•
+	int x = GetRand(GameConfig::FallingObjectManagerConfig::SpawnMaxX);
 	int y = 0;
 
 	objects_.emplace_back(FallingObjectType::Fish, x, y);

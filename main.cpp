@@ -1,11 +1,16 @@
 #include"DxLib.h"
 #include"System/GameManager.h"
+#include "GameConfig.h"
+
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
 	// ÉtÉåÅ[ÉÄêßå‰ÇÕmainÇ≈çsÇ§
 	ChangeWindowMode(TRUE);
-	SetGraphMode(800, 600, 32);
+	SetGraphMode(
+		GameConfig::ScreenConfig::Width,
+		GameConfig::ScreenConfig::Height,
+		GameConfig::ScreenConfig::colorBit);
 
 	if (DxLib_Init() == -1)
 	{

@@ -7,7 +7,7 @@ void Input::update()
 	memcpy(previous, current, sizeof(current));
 
 	// ¡ƒtƒŒ[ƒ€‚Ìó‘Ô‚ğæ“¾
-	for (int i = 0; i < 256; ++i)
+	for (int i = 0; i < KeyCount; ++i)
 	{
 		current[i] = CheckHitKey(i);
 	}

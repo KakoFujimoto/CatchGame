@@ -1,7 +1,7 @@
 #include "GameTimer.h"
 #include "Graphic/Renderer.h"
 #include "UI/GameUI.h"
-
+#include "GameConfig.h"
 
 
 void GameTimer::start(int limitFrame)
@@ -25,7 +25,7 @@ bool GameTimer::isTimeUp() const
 
 int GameTimer::getRemainingSecond() const
 {
-	return (limitFrame_ - currentFrame_) / 60;
+	return (limitFrame_ - currentFrame_) / GameConfig::Time::FrameRate;
 }
 
 void GameTimer::draw(Renderer& renderer, const GameUI& ui) const

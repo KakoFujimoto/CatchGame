@@ -10,6 +10,7 @@ public:
 	bool isTriggered(int key) const;
 
 private:
-	int current[256] = {};
-	int previous[256] = {};
+	static constexpr int KeyCount = 256;
+	int current[KeyCount] = {};
+	int previous[KeyCount] = {};
 };

@@ -1,6 +1,7 @@
 #pragma once
 #include "FallingObjectType.h"
 #include "System/ScoreEffect.h"
+#include "GameConfig.h"
 
 class Renderer;
 class HitArea;
@@ -28,7 +29,7 @@ private:
 	FallingObjectType type_;
 	int x_;
 	int y_;
-	int width_ = 40;
-	int height_ = 40;
+	int width_ = GameConfig::FallingObjectConfig::Width;
+	int height_ = GameConfig::FallingObjectConfig::Height;
 	int fallspeed_;
 };

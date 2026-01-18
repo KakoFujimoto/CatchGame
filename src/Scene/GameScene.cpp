@@ -5,6 +5,7 @@
 #include "System/HitCheck.h"
 #include "FallingObject/FallingObjectImages.h"
 #include "UI/GameUI.h"
+#include "GameConfig.h"
 #include <DxLib.h>
 #include <iostream>
 #include <cassert>
@@ -26,8 +27,13 @@ void GameScene::onEnter()
 {
 	score.reset();
 	player.initialize(400, 500);
-	// ¡‚Í‰¼‚Å§ŒÀŠÔ30•b
-	gameTimer.start(60 * 30);
+
+	// ƒvƒŒƒCŠÔ‚Ìİ’è
+	gameTimer.start(
+		GameConfig::Time::FrameRate
+		*
+		GameConfig::Time::PlayTime
+	);
 }
 
 SceneId GameScene::update(const Input& input)

@@ -14,14 +14,10 @@ FallingObject::FallingObject(
 	switch (type_)
 	{
 	case FallingObjectType::Fish:
-		width_ = 40;
-		height_ = 40;
-		fallspeed_ = 2;
+		fallspeed_ = GameConfig::FallingObjectConfig::FishSpeed;
 		break;
 	case FallingObjectType::Rock:
-		width_ = 40;
-		height_ = 40;
-		fallspeed_ = 5;
+		fallspeed_ = GameConfig::FallingObjectConfig::RockSpeed;
 		break;
 	}
 }

@@ -1,5 +1,6 @@
 #include "Score.h"
 #include "Graphic/Renderer.h"
+#include "GameConfig.h"
 
 
 void Score::add(int value)
@@ -19,5 +20,8 @@ void Score::reset()
 
 void Score::draw(Renderer& renderer) const
 {
-	renderer.drawText(10, 25, "Score : " + std::to_string(score_));
+	renderer.drawText(
+		GameConfig::ScoreConfig::DisplayMarignX,
+		GameConfig::ScoreConfig::DisplayMarignY,
+		"Score : " + std::to_string(score_));
 }
