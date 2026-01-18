@@ -12,6 +12,8 @@ class GameManager;
 class ImageStore;
 class FallingObjectImages;
 class PlayerImages;
+class GameUI;
+
 
 // 各Sceneのインスタンスを保持する
 // Sceneの切り替えをする
@@ -21,7 +23,8 @@ public:
     SceneManager(
         const ImageStore& imageStore,
         const FallingObjectImages& fallingObjectImages,
-        const PlayerImages& playerImages
+        const PlayerImages& playerImages,
+        const GameUI& gameUi
     );
     void initialize(GameManager& gameManager);
     void update(const Input& input);

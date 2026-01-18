@@ -4,6 +4,7 @@
 #include "SceneId.h"
 #include "System/HitCheck.h"
 #include "FallingObject/FallingObjectImages.h"
+#include "UI/GameUI.h"
 #include <DxLib.h>
 #include <iostream>
 #include <cassert>
@@ -11,11 +12,14 @@
 GameScene::GameScene(
 	const ImageStore& imageStore,
 	const FallingObjectImages& fallingObjectimages,
-	const PlayerImages& playerImages
+	const PlayerImages& playerImages,
+	const GameUI& gameUi
 )
 	: imageStore_(imageStore),
 	fallingObjectimages_(fallingObjectimages),
-	playerImages_(playerImages)
+	playerImages_(playerImages),
+	gameUi_(gameUi)
+
 {
 }
 void GameScene::onEnter()
@@ -60,7 +64,7 @@ void GameScene::draw(Renderer& renderer)
 {
 	player.draw(renderer, imageStore_, playerImages_);
 	fallingObjectManager.draw(renderer, imageStore_, fallingObjectimages_);
-	gameTimer.draw(renderer);
+	gameTimer.draw(renderer, gameUi_);
 	score.draw(renderer);
 }
 

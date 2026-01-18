@@ -10,6 +10,8 @@ class Input;
 class ImageStore;
 class FallingObjectImages;
 class PlayerImages;
+class GameUI;
+
 
 class GameScene : public Scene
 {
@@ -17,7 +19,8 @@ public:
 	GameScene(
 		const ImageStore& imageStore,
 		const FallingObjectImages& fallingObjectimages,
-		const PlayerImages& playerImages
+		const PlayerImages& playerImages,
+		const GameUI& gameUi
 	);
 	void onEnter() override;
 	SceneId update(const Input& input) override;
@@ -32,4 +35,5 @@ private:
 	const ImageStore& imageStore_;
 	const FallingObjectImages& fallingObjectimages_;
 	const PlayerImages& playerImages_;
+	const GameUI& gameUi_;
 };

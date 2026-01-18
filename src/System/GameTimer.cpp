@@ -1,5 +1,7 @@
 #include "GameTimer.h"
 #include "Graphic/Renderer.h"
+#include "UI/GameUI.h"
+
 
 
 void GameTimer::start(int limitFrame)
@@ -26,8 +28,7 @@ int GameTimer::getRemainingSecond() const
 	return (limitFrame_ - currentFrame_) / 60;
 }
 
-void GameTimer::draw(Renderer& renderer) const
+void GameTimer::draw(Renderer& renderer, const GameUI& ui) const
 {
-	int remainingSecond = getRemainingSecond();
-	renderer.drawText(10, 10, "Time : " + std::to_string(remainingSecond));
+	ui.drawTimer(renderer, getRemainingSecond());
 }

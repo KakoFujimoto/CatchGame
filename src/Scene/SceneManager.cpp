@@ -2,17 +2,19 @@
 #include "TitleScene.h"
 #include "SceneId.h"
 #include "System/GameManager.h"
+#include "UI/GameUI.h"
+
 
 SceneManager::SceneManager(
     const ImageStore& imageStore,
     const FallingObjectImages& fallingObjectImages,
-    const PlayerImages& playerImages
+    const PlayerImages& playerImages,
+    const GameUI& gameUi
 )
     :titleScene(),
-    gameScene(imageStore, fallingObjectImages, playerImages),
+    gameScene(imageStore, fallingObjectImages, playerImages, gameUi),
     resultScene(gameScene)
 {
-
 }
 
 void SceneManager::initialize(GameManager& gameManager)

@@ -1,6 +1,7 @@
 #pragma once
 
 class Renderer;
+class GameUI;
 
 class GameTimer
 {
@@ -9,7 +10,7 @@ public:
 	void update();
 	bool isTimeUp() const;
 	int getRemainingSecond() const;
-	void draw(Renderer& renderer) const;
+	void draw(Renderer& renderer, const GameUI& ui) const;
 
 private:
 	int currentFrame_ = 0;

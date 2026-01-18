@@ -6,6 +6,8 @@
 #include "Graphic/ImageStore.h"
 #include "Graphic/PlayerImages.h"
 #include "FallingObject/FallingObjectImages.h"
+#include "UI/GameUI.h"
+
 
 class GameManager
 {
@@ -23,4 +25,5 @@ private:
     Input input;
     ImageLoader imageLoader;
     SceneManager sceneManager;
+    GameUI gameUi;
 };

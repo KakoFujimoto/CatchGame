@@ -152,6 +152,7 @@
     <ClCompile Include="src\Graphic\ImageLoader.cpp" />
     <ClCompile Include="src\System\Input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\UI\GameUI.cpp" />
     <ClCompile Include="src\UI\Player.cpp" />
     <ClCompile Include="src\Graphic\Renderer.cpp" />
     <ClCompile Include="src\Scene\ResultScene.cpp" />
@@ -174,6 +175,7 @@
     <ClInclude Include="src\System\HitCheck.h" />
     <ClInclude Include="src\Graphic\ImageLoader.h" />
     <ClInclude Include="src\System\Input.h" />
+    <ClInclude Include="src\UI\GameUI.h" />
     <ClInclude Include="src\UI\MoveState.h" />
     <ClInclude Include="src\UI\Player.h" />
     <ClInclude Include="src\UI\Facing.h" />
