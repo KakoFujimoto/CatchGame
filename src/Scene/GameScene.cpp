@@ -41,7 +41,8 @@ SceneId GameScene::update(const Input& input)
 	// “–‚½‚è”»’è
 	for (auto& obj : fallingObjectManager.getObjectForUpdate())
 	{
-		if (HitCheck::isHit(player.getHitArea(), obj.getHitArea()))
+		bool hit = HitCheck::isHit(player.getHitArea(), obj.getHitArea());
+		if (hit)
 		{
 			switch (obj.getScoreEffect())
 			{
@@ -52,14 +53,14 @@ SceneId GameScene::update(const Input& input)
 				score.add(-5);
 				break;
 			}
-			obj.markForRemove();
+			fallingObjectManager.requestRemove(&obj);
 		}
 	}
 	if (timeUp)
 	{
 		return SceneId::Result;
 	}
-	fallingObjectManager.removeMarkedObjects();
+	fallingObjectManager.applyRemovals();
 	return SceneId::None;
 }
 

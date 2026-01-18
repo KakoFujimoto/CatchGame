@@ -18,8 +18,11 @@ public:
 	void spawn();
 	const std::vector<FallingObject>& getObject() const; // 読み取り専用
 	std::vector<FallingObject>& getObjectForUpdate(); // 更新・削除用
-	void removeMarkedObjects();
+	void requestRemove(FallingObject* obj);
+	void applyRemovals();
 private:
 	std::vector<FallingObject> objects_;
+	std::vector<FallingObject*> removeRequests_;
+
 	int spawnTimer_ = 0;
 };

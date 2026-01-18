@@ -72,19 +72,27 @@ std::vector<FallingObject>& FallingObjectManager::getObjectForUpdate()
 	return objects_;
 }
 
-void FallingObjectManager::removeMarkedObjects()
+void FallingObjectManager::requestRemove(FallingObject* obj)
 {
-	auto& objs = objects_;
-
-	objs.erase(
-		std::remove_if(
-			objs.begin(),
-			objs.end(),
-			[](const FallingObject& obj)
-			{
-				return obj.isMarkedForRemove();
-			}
-		),
-		objs.end()
-	);
+	removeRequests_.push_back(obj);
 }
+
+void FallingObjectManager::applyRemovals()
+{
+	for (auto* obj : removeRequests_)
+	{
+		objects_.erase(
+			std::remove_if(
+				objects_.begin(),
+				objects_.end(),
+				[&](const FallingObject& o)
+				{
+					return &o == obj;
+				}
+			),
+			objects_.end()
+		);
+	}
+	removeRequests_.clear();
+}
+
