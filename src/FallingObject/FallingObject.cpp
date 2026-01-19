@@ -1,4 +1,4 @@
-#include "FallingObject.h"
+ï»¿#include "FallingObject.h"
 #include "Graphic/Renderer.h"
 #include "System/HitArea.h"
 #include "Graphic/ImageStore.h"
@@ -39,7 +39,7 @@ void FallingObject::draw(
 
 bool FallingObject::isOutOfScreen() const
 {
-	// ‰æ–Ê‰º‚Éo‚½‚©‚Ç‚¤‚©
+	// ç”»é¢ä¸‹ã«å‡ºãŸã‹ã©ã†ã‹
 	return y_ > GameConfig::ScreenConfig::DeadLineY;
 }
 
@@ -66,9 +66,9 @@ int FallingObject::getScoreValue() const
 	switch (effect)
 	{
 	case ScoreEffect::Plus:
-		return 10;
+		return GameConfig::ScoreConfig::PlusValue;
 	case ScoreEffect::Minus:
-		return -5;
+		return GameConfig::ScoreConfig::MinusValue;
 	default:
 		return 0;
 	}

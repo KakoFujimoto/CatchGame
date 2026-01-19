@@ -1,17 +1,17 @@
-#pragma once
+ï»¿#pragma once
 #include "UI/Gamekey.h"
 
 class Input
 {
 public:
 	void update();
-	// ‰Ÿ‚µ‚Á‚Ï‚È‚µ
+	// æŠ¼ã—ã£ã±ãªã—
 	bool isPressed(GameKey key) const;
-	// ‰Ÿ‚µ‚½uŠÔ
+	// æŠ¼ã—ãŸç¬é–“
 	bool isTriggered(GameKey key) const;
 
 private:
-	static constexpr int KeyCount = 256;
+	static constexpr int KeyCount = 256; // DxLibä»•æ§˜
 	int current[KeyCount] = {};
 	int previous[KeyCount] = {};
 };

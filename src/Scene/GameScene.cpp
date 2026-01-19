@@ -1,4 +1,4 @@
-#include "GameScene.h"
+ï»¿#include "GameScene.h"
 #include "System/Input.h"
 #include "Graphic/Renderer.h"
 #include "SceneId.h"
@@ -26,9 +26,12 @@ GameScene::GameScene(
 void GameScene::onEnter()
 {
 	score.reset();
-	player.initialize(400, 500);
+	player.initialize(
+		GameConfig::Player::startX, 
+		GameConfig::Player::startY
+	);
 
-	// ƒvƒŒƒCŠÔ‚Ìİ’è
+	// ãƒ—ãƒ¬ã‚¤æ™‚é–“ã®è¨­å®š
 	gameTimer.start(
 		GameConfig::Time::FrameRate
 		*
@@ -48,7 +51,7 @@ SceneId GameScene::update(const Input& input)
 
 	fallingObjectManager.update(!timeUp);
 
-	// “–‚½‚è”»’è
+	// å½“ãŸã‚Šåˆ¤å®š
 	for (auto& obj : fallingObjectManager.getObjectForUpdate())
 	{
 		bool hit = HitCheck::isHit(player.getHitArea(), obj.getHitArea());

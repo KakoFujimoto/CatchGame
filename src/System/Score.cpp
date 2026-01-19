@@ -1,4 +1,4 @@
-#include "Score.h"
+﻿#include "Score.h"
 #include "Graphic/Renderer.h"
 #include "GameConfig.h"
 
@@ -21,7 +21,7 @@ void Score::reset()
 void Score::draw(Renderer& renderer) const
 {
 	renderer.drawText(
-		GameConfig::ScoreConfig::DisplayMarignX,
-		GameConfig::ScoreConfig::DisplayMarignY,
+		GameConfig::ScoreConfig::DisplayMarginX,
+		GameConfig::ScoreConfig::DisplayMarginY,
 		"Score : " + std::to_string(score_));
 }

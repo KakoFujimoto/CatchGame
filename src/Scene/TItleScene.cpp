@@ -1,4 +1,4 @@
-#include "TitleScene.h"
+﻿#include "TitleScene.h"
 #include "System/Input.h"
 #include "Graphic/Renderer.h"
 #include "SceneId.h"
@@ -18,13 +18,13 @@ SceneId TitleScene::update(const Input& input)
 void TitleScene::draw(Renderer& renderer)
 {
 	renderer.drawText(
-		GameConfig::TitleSceneConfig::DisplayMarignX,
-		GameConfig::TitleSceneConfig::TitleDisplayMarignY,
+		GameConfig::TitleSceneConfig::DisplayMarginX,
+		GameConfig::TitleSceneConfig::TitleDisplayMarginY,
 		"TITLE"
 	);
 	renderer.drawText(
-		GameConfig::TitleSceneConfig::DisplayMarignX,
-		GameConfig::TitleSceneConfig::MessageDisplayMarignY,
+		GameConfig::TitleSceneConfig::DisplayMarginX,
+		GameConfig::TitleSceneConfig::MessageDisplayMarginY,
 		"PRESS ENTER"
 	);
 }

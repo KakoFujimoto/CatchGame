@@ -1,4 +1,4 @@
-#include "ResultScene.h"
+﻿#include "ResultScene.h"
 #include "System/Input.h"
 #include "Graphic/Renderer.h"
 #include "SceneId.h"
@@ -23,13 +23,13 @@ void ResultScene::draw(Renderer& renderer)
 {
 	auto score = std::to_string(score_);
 	renderer.drawText(
-		GameConfig::ResultSceneConfig::DisplayMarignX,
-		GameConfig::ResultSceneConfig::ResultDisplayMarignY,
+		GameConfig::ResultSceneConfig::DisplayMarginX,
+		GameConfig::ResultSceneConfig::ResultDisplayMarginY,
 		"RESULT : " + score
 	);
 	renderer.drawText(
-		GameConfig::ResultSceneConfig::DisplayMarignX,
-		GameConfig::ResultSceneConfig::ReplayDisplayMarignY,
+		GameConfig::ResultSceneConfig::DisplayMarginX,
+		GameConfig::ResultSceneConfig::ReplayDisplayMarginY,
 		"ENTER TO REPLAY"
 	);
 }

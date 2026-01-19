@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 namespace GameConfig
 {
@@ -46,21 +46,29 @@ namespace GameConfig
 
 	struct ResultSceneConfig
 	{
-		static constexpr int DisplayMarignX = 200;
-		static constexpr int ResultDisplayMarignY = 200;
-		static constexpr int ReplayDisplayMarignY = 240;
+		static constexpr int DisplayMarginX = 200;
+		static constexpr int ResultDisplayMarginY = 200;
+		static constexpr int ReplayDisplayMarginY = 240;
 	};
 
 	struct TitleSceneConfig
 	{
-		static constexpr int DisplayMarignX = 200;
-		static constexpr int TitleDisplayMarignY = 200;
-		static constexpr int MessageDisplayMarignY = 240;
+		static constexpr int DisplayMarginX = 200;
+		static constexpr int TitleDisplayMarginY = 200;
+		static constexpr int MessageDisplayMarginY = 240;
 	};
 
 	struct ScoreConfig
 	{
-		static constexpr int DisplayMarignX = 10;
-		static constexpr int DisplayMarignY = 25;
+		static constexpr int DisplayMarginX = 10;
+		static constexpr int DisplayMarginY = 25;
+		static constexpr int PlusValue = 10;
+		static constexpr int MinusValue = -5;
 	};
+
+	namespace Player
+	{
+		constexpr int startX = 400;
+		constexpr int startY = 500;
+	}
 }
