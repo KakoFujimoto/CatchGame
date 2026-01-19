@@ -3,6 +3,7 @@
 #include "System/HitArea.h"
 #include "Graphic/ImageStore.h"
 #include "FallingObjectImages.h"
+#include "GameConfig.h"
 
 
 FallingObject::FallingObject(
@@ -38,7 +39,8 @@ void FallingObject::draw(
 
 bool FallingObject::isOutOfScreen() const
 {
-	return y_ > 500; // ‰æ–Ê‰º‚Éo‚½‚©‚Ç‚¤‚©
+	// ‰æ–Ê‰º‚Éo‚½‚©‚Ç‚¤‚©
+	return y_ > GameConfig::ScreenConfig::DeadLineY;
 }
 
 HitArea FallingObject::getHitArea() const

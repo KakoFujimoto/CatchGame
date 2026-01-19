@@ -20,7 +20,8 @@ namespace GameConfig
 		static constexpr int Width = 800;
 		static constexpr int Height = 600;
 		static constexpr int colorBit = 32;
-
+		static constexpr int Margin = 100;
+		static constexpr int DeadLineY = Height - Margin;
 	};
 
 	struct FallingObjectConfig
