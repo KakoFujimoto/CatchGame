@@ -29,5 +29,20 @@ bool Input::isPressed(GameKey key) const
 
 bool Input::isTriggered(GameKey key) const
 {
-	return current[key] != 0 && previous[key] == 0;
+	switch (key)
+	{
+	case GameKey::Left:
+		return current[KEY_INPUT_LEFT] != 0
+			&& previous[KEY_INPUT_LEFT] == 0;
+
+	case GameKey::Right:
+		return current[KEY_INPUT_RIGHT] != 0
+			&& previous[KEY_INPUT_RIGHT] == 0;
+
+	case GameKey::Enter:
+		return current[KEY_INPUT_RETURN] != 0
+			&& previous[KEY_INPUT_RETURN] == 0;
+	}
+
+	return false;
 }

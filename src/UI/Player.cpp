@@ -3,6 +3,7 @@
 #include "System/HitArea.h"
 #include "Graphic/ImageStore.h"
 #include "Graphic/PlayerImages.h"
+#include "UI/GameKey.h"
 #include <DxLib.h>
 #include <cassert>
 
@@ -16,13 +17,13 @@ void Player::initialize(int startX, int startY)
 
 void Player::update(const Input& input)
 {
-	if (input.isPressed(KEY_INPUT_LEFT))
+	if (input.isPressed(GameKey::Left))
 	{
 		facing_ = Facing::Left;
 		moveState_ = MoveState::Walk;
 		x_ -= speed_;
 	}
-	if (input.isPressed(KEY_INPUT_RIGHT))
+	if (input.isPressed(GameKey::Right))
 	{
 		facing_ = Facing::Right;
 		moveState_ = MoveState::Walk;

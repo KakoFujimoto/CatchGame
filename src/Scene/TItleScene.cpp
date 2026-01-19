@@ -8,7 +8,7 @@
 
 SceneId TitleScene::update(const Input& input)
 {
-	if (input.isTriggered(KEY_INPUT_RETURN))
+	if (input.isTriggered(GameKey::Enter))
 	{
 		return SceneId::Game;
 	}
