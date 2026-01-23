@@ -1,12 +1,12 @@
-#include "Input.h"
+ï»¿#include "Input.h"
 #include <DxLib.h>
 
 void Input::update()
 {
-	// ‘OƒtƒŒ[ƒ€‚Ìó‘Ô‚ğ•Û‘¶
+	// å‰ãƒ•ãƒ¬ãƒ¼ãƒ ã®çŠ¶æ…‹ã‚’ä¿å­˜
 	memcpy(previous, current, sizeof(current));
 
-	// ¡ƒtƒŒ[ƒ€‚Ìó‘Ô‚ğæ“¾
+	// ä»Šãƒ•ãƒ¬ãƒ¼ãƒ ã®çŠ¶æ…‹ã‚’å–å¾—
 	for (int i = 0; i < KeyCount; ++i)
 	{
 		current[i] = CheckHitKey(i);
@@ -18,11 +18,11 @@ bool Input::isPressed(GameKey key) const
 	switch (key)
 	{
 	case GameKey::Left:
-		return CheckHitKey(KEY_INPUT_LEFT);
+		return current[KEY_INPUT_LEFT];
 	case GameKey::Right:
-		return CheckHitKey(KEY_INPUT_RIGHT);
+		return current[KEY_INPUT_RIGHT];
 	case GameKey::Enter:
-		return CheckHitKey(KEY_INPUT_RETURN);
+		return current[KEY_INPUT_RETURN];
 	}
 	return false;
 }
