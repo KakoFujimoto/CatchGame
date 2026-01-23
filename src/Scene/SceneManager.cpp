@@ -1,4 +1,4 @@
-#include "SceneManager.h"
+ï»¿#include "SceneManager.h"
 #include "TitleScene.h"
 #include "SceneId.h"
 #include "System/GameManager.h"
@@ -39,7 +39,7 @@ void SceneManager::update(const Input& input)
     }
 }
 
-// ¡‚ÌScene‚É•`‰æ‚ğˆË—Š
+// ä»Šã®Sceneã«æç”»ã‚’ä¾é ¼
 void SceneManager::draw(Renderer& renderer)
 {
     if (currentScene)
@@ -54,17 +54,15 @@ void SceneManager::changeScene(SceneId id)
     {
     case SceneId::Title:
         currentScene = &titleScene;
-        currentScene->onEnter();
         break;
     case SceneId::Game:
         currentScene = &gameScene;
-        gameScene.onEnter();
         break;
     case SceneId::Result:
         currentScene = &resultScene;
-        currentScene->onEnter();
         break;
     default:
         return;
     }
+    currentScene->onEnter();
 }
