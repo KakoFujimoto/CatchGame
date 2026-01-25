@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "UI/Facing.h"
 #include "UI/MoveState.h"
 #include "FallingObject/FallingObjectType.h"
@@ -10,6 +10,11 @@ class FallingObjectImages;
 class ImageLoader
 {
 public:
+	//void load(
+	//	ImageStore& imageStore,
+	//	IImages& images
+	//);
+
 	void loadAll(
 		ImageStore& imageStore,
 		PlayerImages& playerImages,

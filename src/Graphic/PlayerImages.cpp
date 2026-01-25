@@ -1,10 +1,13 @@
-#include "DxLib.h"
+﻿#include "DxLib.h"
 #include "PlayerImages.h"
 #include "ImageStore.h"
 
+//int player_left_1_id;
 
 void PlayerImages::load(ImageStore& store)
 {
+    //player_left_1_id = loadimage("player_left_1");
+
     store.set(ImageId::Player_Left_Idle,
         LoadGraph("assets/images/player/player_left_1.png"));
     store.set(ImageId::Player_Left_Walk,
@@ -23,6 +26,7 @@ ImageId PlayerImages::resolve(Facing facing, MoveState moveState) const
         switch (moveState)
         {
         case MoveState::Idle:
+            //return player_left_1_id;
             return ImageId::Player_Left_Idle;
         case MoveState::Walk:
             return ImageId::Player_Left_Walk;

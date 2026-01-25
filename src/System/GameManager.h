@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Scene/SceneManager.h"
 #include "Graphic/Renderer.h"
 #include "Graphic/ImageLoader.h"
@@ -23,7 +23,7 @@ private:
     FallingObjectImages fallingObjectImages;
     Renderer renderer;
     Input input;
-    ImageLoader imageLoader;
+    // ImageLoader imageLoader; // -> スコープが広いのでローカル変数でいいのでは？　※状態などを特にもっていない
     SceneManager sceneManager;
     GameUI gameUi;
 };

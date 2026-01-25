@@ -16,10 +16,10 @@ GameScene::GameScene(
 	const PlayerImages& playerImages,
 	const GameUI& gameUi
 )
-	: imageStore_(imageStore),
-	fallingObjectimages_(fallingObjectimages),
-	playerImages_(playerImages),
-	gameUi_(gameUi)
+	: imageStore_(imageStore)
+	, fallingObjectimages_(fallingObjectimages)
+	, playerImages_(playerImages)
+	, gameUi_(gameUi)
 
 {
 }
@@ -71,10 +71,20 @@ SceneId GameScene::update(const Input& input)
 
 void GameScene::draw(Renderer& renderer)
 {
+	// playerDrawer.draw(renderer);
 	player.draw(renderer, imageStore_, playerImages_);
 	fallingObjectManager.draw(renderer, imageStore_, fallingObjectimages_);
-	gameTimer.draw(renderer, gameUi_);
-	score.draw(renderer);
+
+	//　gameTimer.draw(renderer, gameUi_);
+	// score.draw(renderer);
+	// plyaerlife.draw()
+	//  : .draw()
+	//  : .draw()
+	//  : .draw()
+
+	gameUi_.draw(
+		renderer,
+		*this);
 }
 
 int GameScene::getScore() const

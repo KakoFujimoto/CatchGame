@@ -1,4 +1,4 @@
-#include "GameTimer.h"
+﻿#include "GameTimer.h"
 #include "Graphic/Renderer.h"
 #include "UI/GameUI.h"
 #include "GameConfig.h"
@@ -28,7 +28,7 @@ int GameTimer::getRemainingSecond() const
 	return (limitFrame_ - currentFrame_) / GameConfig::Time::FrameRate;
 }
 
-void GameTimer::draw(Renderer& renderer, const GameUI& ui) const
-{
-	ui.drawTimer(renderer, getRemainingSecond());
-}
+//void GameTimer::draw(Renderer& renderer, const GameUI& ui) const
+//{
+//	ui.drawTimer(renderer, getRemainingSecond());
+//}

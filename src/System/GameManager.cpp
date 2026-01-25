@@ -14,7 +14,11 @@ GameManager::GameManager()
 
 void GameManager::initialize()
 {
-	imageLoader.loadAll(imageStore, playerImages, fallingObjectImages);
+	//imageLoader.loadAll(imageStore, playerImages, fallingObjectImages);
+	//imageLoader.load(imageStore, playerImages);
+	//imageLoader.load(imageStore, fallingObjectImages);
+	playerImages.load(imageStore);
+	fallingObjectImages.load(imageStore);
 	sceneManager.initialize(*this);
 }
 void GameManager::update()
